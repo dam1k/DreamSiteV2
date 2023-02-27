@@ -1,0 +1,78 @@
+@import "../../variables";
+
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    // .header__container
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1000px;
+        padding-top: 35px;
+    }
+
+    // .header__right
+
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    // .header__links
+
+    &__links {
+        font-family: IBMPlexMono-Regular, sans-serif;
+        display: flex;
+        gap: 15px;
+    }
+
+    // .header__link
+
+    &__link {
+        @include secondText;
+        color: $white;
+        padding: 7px 15px;
+        background-color: $greySecond;
+        border: 1px solid $greySecond;
+        border-radius: $radius;
+        transition: 0.25s;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+
+        &--active {
+            background-color: $white;
+            color: $black;
+            border: 1px solid $white;
+
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    gap: 100px;
+
+    // .nav__links
+
+    &__links {
+        @include secondText;
+
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        transition: 0.25s;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}

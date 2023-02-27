@@ -1,46 +1,88 @@
-$black: #000;
-$white: #fff;
-$grey: rgba(255, 255, 255, 0.5);
+@import "./variables.scss";
 
 body {
-     color: $white;
-     background-color: $black;
-     min-height:100vh;
+    color: $white;
+    background-color: $black;
+    min-height: 100vh;
 }
 
-.container {
-     margin: 0 auto;
-     max-width: 1430px;
-     padding: 0 15px;
+[class*="__container"] {
+    margin: 0 auto;
+    max-width: 1430px;
+    padding: 0 15px;
 }
 
 button {
-padding-left: 15px;
-padding-right: 15px;
-padding-top:6.5px;
-padding-bottom:7px;
-font-family: "IBMPlexMono-Regular";
-border-radius: 7px;
-cursor:pointer;
-font-size:12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6.5px;
+    padding-bottom: 7px;
+    font-family: "IBMPlexMono-Regular";
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
 }
 
 .dark_btn {
-     background-color: rgba(255, 255, 255, 0.25);
-     color:#fff;
-     border:1px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .light_btn {
-     background-color: #fff;
-     color:#000;
-     border:1px solid #fff;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
 }
 
 .flex {
-     display: flex;
+    display: flex;
 }
 
 .items {
-     align-items: flex-start;
+    align-items: flex-start;
+}
+
+.wrapper {
+    min-height: 150vh;
+}
+
+// Scrollbar ====================================================================================================
+
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #0f0f0f #000000;
+}
+
+/* Smooth Scrolling*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* Width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+/* Handle/Thunmb */
+::-webkit-scrollbar-thumb {
+    background: #0f0f0f;
+    border: 1px solid #1b1b1b;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #202122;
 }

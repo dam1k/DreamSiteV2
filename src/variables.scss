@@ -1,0 +1,16 @@
+$black: #000;
+$white: #fff;
+$grey: rgba(255, 255, 255, 0.5);
+$greySecond: rgba(255, 255, 255, 0.25);
+$radius: 7px;
+
+@mixin secondText {
+    font-family: "IBMPlexMono-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: $grey;
+}

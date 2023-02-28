@@ -4,6 +4,12 @@
     width: 100%;
     position: sticky;
     top: 0;
+
+    &__logo {
+        height: max-content;
+        width: max-content;
+    }
+
     // .header__container
 
     &__container {
@@ -40,19 +46,14 @@
         transition: 0.25s;
 
         &:hover {
-            background-color: $white;
-            color: $black;
+            background-color: $black;
+            color: $white;
+            border: 1px solid $white;
         }
 
         &--active {
             background-color: $white;
             color: $black;
-            border: 1px solid $white;
-
-            &:hover {
-                background-color: $black;
-                color: $white;
-            }
         }
     }
 }
@@ -64,12 +65,21 @@
     // .nav__links
 
     &__links {
-        @include secondText;
-
         display: flex;
         flex-direction: column;
         gap: 15px;
         transition: 0.25s;
+    }
+
+    &__link {
+        @include secondText;
+        display: flex;
+        gap: 5px;
+        transition: 0.25s;
+
+        i {
+            font-size: 16px;
+        }
 
         &:hover {
             color: $white;

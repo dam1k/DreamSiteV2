@@ -4,6 +4,9 @@
     width: 100%;
     position: sticky;
     top: 0;
+    margin-bottom:200px;
+    backdrop-filter: blur(7px);
+    padding-bottom:10px;
 
     &__logo {
         height: max-content;

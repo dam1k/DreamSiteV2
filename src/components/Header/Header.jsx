@@ -13,7 +13,7 @@ return (
                     <ul className="nav__links">
                         <li>
                             <a href="#" className="nav__link">
-                                Projects<i class="ri-arrow-right-up-line"></i>
+                                Projects<i className="ri-arrow-right-up-line"></i>
                             </a>
                         </li>
                         <li><a href="#" className="nav__link">About</a></li>
@@ -34,4 +34,4 @@ return (
 )
 }
 
-export default Header
+export default Header;

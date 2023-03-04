@@ -1,0 +1,25 @@
+.about {
+     &__container {
+          display: grid;
+          grid-template-columns: 1fr 1000px;
+     }
+
+     &__title {
+          display: flex;
+          column-gap: 9px;
+          flex-wrap: wrap;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 35px;
+          line-height: 46px;
+          // text-indent: 200px;
+     }
+
+     &__title--uppercase {
+          text-transform: uppercase;
+          span:first-child {
+               margin-left:200px;
+          }
+     }
+
+}

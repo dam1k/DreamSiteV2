@@ -1,22 +1,24 @@
+@import "../../variables";
+
 .hero {
-    // .hero__container
+  // .hero__container
 
-    &__container {
+  &__container {
+  }
+
+  // .hero__text
+  &__text {
+    color: $white;
+    display: flex;
+    flex-wrap: wrap;
+    // row-gap: 35px;
+    column-gap: 15px;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 73px;
+    text-transform: uppercase;
+    h2:first-child {
+      margin-left: 500px;
     }
-
-    // .hero__text
-
-    &__text {
-        display: flex;
-        flex-wrap: wrap;
-        // row-gap: 35px;
-        column-gap: 15px;
-        font-weight: 500;
-        font-size: 55px;
-        line-height: 73px;
-        text-transform: uppercase;
-        h2:first-child {
-            margin-left: 500px;
-        }
-    }
+  }
 }

@@ -8,7 +8,7 @@ body {
 
 [class*="__container"] {
     margin: 0 auto;
-    max-width: 1630px;
+    max-width: calc($container + 30px);
     padding: 0 15px;
 }
 

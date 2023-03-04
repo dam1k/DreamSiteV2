@@ -1,7 +1,10 @@
+@import "../../variables";
+
 .about {
+     margin-top: 500px;
      &__container {
           display: grid;
-          grid-template-columns: 1fr 1000px;
+          grid-template-columns: 1fr 1100px;
      }
 
      &__title {
@@ -13,13 +16,24 @@
           font-size: 35px;
           line-height: 46px;
           // text-indent: 200px;
+
+          &--left {
+               span:last-child {
+                    font-family: "IBMPlexMono-Regular";
+                    color: $grey;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 16px;
+                    letter-spacing: -0.04em;
+                    text-transform: uppercase;
+               }
+          }
      }
 
      &__title--uppercase {
           text-transform: uppercase;
           span:first-child {
-               margin-left:200px;
+               margin-left: 200px;
           }
      }
-
 }

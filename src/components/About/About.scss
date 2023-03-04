@@ -1,39 +1,100 @@
 @import "../../variables";
 
 .about {
-     margin-top: 500px;
-     &__container {
-          display: grid;
-          grid-template-columns: 1fr 1100px;
-     }
+  margin-top: 500px;
+  // .about__container
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1100px;
+  }
 
-     &__title {
-          display: flex;
-          column-gap: 9px;
-          flex-wrap: wrap;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 35px;
-          line-height: 46px;
-          // text-indent: 200px;
+  // .about__title
+  &__title {
+    display: flex;
+    column-gap: 9px;
+    flex-wrap: wrap;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 46px;
+    // text-indent: 200px;
+    // .about__title--left
+    &--left {
+      span:last-child {
+        font-family: "IBMPlexMono-Regular";
+        color: $grey;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+      }
+    }
 
-          &--left {
-               span:last-child {
-                    font-family: "IBMPlexMono-Regular";
-                    color: $grey;
-                    font-weight: 400;
-                    font-size: 12px;
-                    line-height: 16px;
-                    letter-spacing: -0.04em;
-                    text-transform: uppercase;
-               }
-          }
-     }
+    // .about__title--uppercase
+    &--uppercase {
+      text-transform: uppercase;
+      span:first-child {
+        margin-left: 200px;
+      }
+    }
+  }
 
-     &__title--uppercase {
-          text-transform: uppercase;
-          span:first-child {
-               margin-left: 200px;
-          }
-     }
+  // .about__right
+  &__right {
+  }
+
+  // .about__bottom
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-top: 50px;
+    margin-left: 200px;
+  }
+
+  // .about__activity
+  &__activity {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 46px;
+    color: $white;
+    h3 {
+      display: flex;
+      gap: 5px;
+      color: $grey;
+      span:first-child {
+        font-family: "Red Hat Display";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+      }
+      span:last-child {
+        font-family: "Red Hat Display";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 13px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // .about__subtitle
+  &__subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;
+    max-width: 450px;
+    font-family: "IBMPlexMono-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: $grey;
+  }
 }

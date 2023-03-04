@@ -4,9 +4,9 @@
     width: 100%;
     position: sticky;
     top: 0;
-    margin-bottom:200px;
+    margin-bottom: 200px;
     backdrop-filter: blur(7px);
-    padding-bottom:10px;
+    padding-bottom: 10px;
 
     &__logo {
         height: max-content;
@@ -17,7 +17,7 @@
 
     &__container {
         display: grid;
-        grid-template-columns: 1fr 1000px;
+        grid-template-columns: 1fr 1100px;
         padding-top: 35px;
     }
 

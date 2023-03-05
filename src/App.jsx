@@ -6,6 +6,7 @@ import Hero from "./components/Hero/Hero";
 import Cylinder3d from "./components/Three/Cylinder";
 import { Canvas } from "@react-three/fiber";
 import About from "./components/About/About";
+import Projects from "./components/Projects/Projects.jsx";
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
       <div className="wrapper">
         <Header />
         <Hero />
-        <br></br>
         <About />
+        <Projects />
       </div>
     </div>
   );

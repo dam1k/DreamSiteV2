@@ -1,0 +1,144 @@
+@import "../../variables";
+
+.projects {
+  margin-top: 350px;
+  margin-bottom: 500px;
+  // .projects__container
+  &__container {
+  }
+
+  // .projects__title
+  &__title {
+    display: flex;
+    color: $white;
+    margin-bottom: 25px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 46px;
+
+    span:last-child {
+      font-family: "IBMPlexMono-Regular";
+      color: $grey;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+    }
+  }
+
+  // .projects__list
+  &__list {
+  }
+
+  // .projects__drowdown
+  &__dropdown {
+    padding: 20px 0;
+    cursor: pointer;
+  }
+
+  // .projects__text
+  &__text {
+    display: flex;
+    align-items: center;
+  }
+
+  // .projects__name
+  &__name {
+    min-width: 150px;
+    font-family: "Red Hat Display";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  // .projects__desc
+  &__desc {
+    color: $grey;
+    font-family: "Red Hat Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.line {
+  border-color: $greySecond;
+}
+
+.projects {
+  // .projects__info
+  &__info {
+    cursor: default;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1100px);
+    margin-top: 25px;
+  }
+
+  // .projects__info-inner
+  &__info-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 30px;
+  }
+
+  &__info-images {
+    margin-left: 200px;
+
+    img {
+      aspect-ratio: auto;
+      height: auto;
+      width: 100%;
+      max-width: 900px;
+    }
+  }
+
+  // .projects__info-text
+  &__info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  // .projects__info-title
+  &__info-title {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    font-family: "Red Hat Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+
+    span:first-child {
+      margin-left: 200px;
+    }
+  }
+
+  // .projects__info-subtitle
+  &__info-subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;
+    margin-left: 200px;
+    max-width: 450px;
+    font-family: "IBMPlexMono-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: $grey;
+  }
+}
+
+.overflow {
+}

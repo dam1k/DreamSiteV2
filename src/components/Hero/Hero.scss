@@ -18,7 +18,7 @@
     line-height: 73px;
     text-transform: uppercase;
     h2:first-child {
-      margin-left: 500px;
+      margin-left: max(500px);
     }
   }
 }

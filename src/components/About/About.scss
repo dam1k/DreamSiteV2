@@ -5,11 +5,12 @@
   // .about__container
   &__container {
     display: grid;
-    grid-template-columns: 1fr 1100px;
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1100px);
   }
 
   // .about__title
   &__title {
+    width: 100%;
     display: flex;
     column-gap: 9px;
     flex-wrap: wrap;
@@ -20,7 +21,9 @@
     // text-indent: 200px;
     // .about__title--left
     &--left {
+      flex-wrap: nowrap;
       span:last-child {
+        min-width: 25px;
         font-family: "IBMPlexMono-Regular";
         color: $grey;
         font-weight: 400;
@@ -55,12 +58,16 @@
 
   // .about__activity
   &__activity {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
     font-style: normal;
     font-weight: 500;
     font-size: 35px;
     line-height: 46px;
     color: $white;
     h3 {
+      display: flex;
       display: flex;
       gap: 5px;
       color: $grey;

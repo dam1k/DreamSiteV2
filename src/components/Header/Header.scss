@@ -1,91 +1,91 @@
 @import "../../variables";
 
 .header {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    margin-bottom: 200px;
-    backdrop-filter: blur(7px);
-    padding-bottom: 10px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  margin-bottom: 200px;
+  //backdrop-filter: blur(15px);
+  padding-bottom: 10px;
 
-    &__logo {
-        height: max-content;
-        width: max-content;
+  &__logo {
+    height: max-content;
+    width: max-content;
+  }
+
+  // .header__container
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1100px);
+    padding-top: 35px;
+  }
+
+  // .header__right
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  // .header__links
+
+  &__links {
+    font-family: IBMPlexMono-Regular, sans-serif;
+    display: flex;
+    gap: 15px;
+  }
+
+  // .header__link
+
+  &__link {
+    @include secondText;
+    color: $white;
+    padding: 7px 15px;
+    background-color: $greySecond;
+    border: 1px solid $greySecond;
+    border-radius: $radius;
+    transition: 0.25s;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+      border: 1px solid $white;
     }
 
-    // .header__container
-
-    &__container {
-        display: grid;
-        grid-template-columns: 1fr 1100px;
-        padding-top: 35px;
+    &--active {
+      background-color: $white;
+      color: $black;
     }
-
-    // .header__right
-
-    &__right {
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
-    }
-
-    // .header__links
-
-    &__links {
-        font-family: IBMPlexMono-Regular, sans-serif;
-        display: flex;
-        gap: 15px;
-    }
-
-    // .header__link
-
-    &__link {
-        @include secondText;
-        color: $white;
-        padding: 7px 15px;
-        background-color: $greySecond;
-        border: 1px solid $greySecond;
-        border-radius: $radius;
-        transition: 0.25s;
-
-        &:hover {
-            background-color: $black;
-            color: $white;
-            border: 1px solid $white;
-        }
-
-        &--active {
-            background-color: $white;
-            color: $black;
-        }
-    }
+  }
 }
 
 .nav {
+  display: flex;
+  gap: 100px;
+
+  // .nav__links
+
+  &__links {
     display: flex;
-    gap: 100px;
+    flex-direction: column;
+    gap: 15px;
+    transition: 0.25s;
+  }
 
-    // .nav__links
+  &__link {
+    @include secondText;
+    display: flex;
+    gap: 5px;
+    transition: 0.25s;
 
-    &__links {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        transition: 0.25s;
+    i {
+      font-size: 16px;
     }
 
-    &__link {
-        @include secondText;
-        display: flex;
-        gap: 5px;
-        transition: 0.25s;
-
-        i {
-            font-size: 16px;
-        }
-
-        &:hover {
-            color: $white;
-        }
+    &:hover {
+      color: $white;
     }
+  }
 }

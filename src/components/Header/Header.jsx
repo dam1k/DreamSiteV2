@@ -2,7 +2,6 @@ import React from "react";
 import logo from "../../assets/logo.svg";
 import arrowupright from "../../assets/arrowupright.svg";
 import "./Header.scss";
-
 const Header = () => {
   return (
     <header className="header">

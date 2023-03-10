@@ -1,6 +1,7 @@
 import React from "react";
 import { gsap } from "gsap";
 import "./Hero.scss";
+import ASCII from "../Three/ASCII";
 
 const heroText =
   "Leveraging the latest technologies to create cutting-edge websites that deliver results.".split(

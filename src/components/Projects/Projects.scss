@@ -16,6 +16,7 @@
     font-weight: 500;
     font-size: 35px;
     line-height: 46px;
+    width:100%;
 
     span:last-child {
       font-family: "IBMPlexMono-Regular";
@@ -77,6 +78,7 @@
     display: grid;
     grid-template-columns: 1fr minmax(auto, 1100px);
     margin-top: 25px;
+    display:none;
   }
 
   // .projects__info-inner
@@ -140,5 +142,6 @@
   }
 }
 
-.overflow {
+.show__project {
+  display:block !important;
 }

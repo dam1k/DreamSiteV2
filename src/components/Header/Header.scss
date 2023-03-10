@@ -4,9 +4,10 @@
   width: 100%;
   position: sticky;
   top: 0;
-  margin-bottom: 200px;
-  //backdrop-filter: blur(15px);
+  margin-bottom: 100px;
+  backdrop-filter: blur(15px);
   padding-bottom: 10px;
+  z-index:1000 !important;
 
   &__logo {
     height: max-content;

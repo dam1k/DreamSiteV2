@@ -2,9 +2,7 @@ import { useStat, useEffect } from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-// import Box from "./components/Three/Box";
-import Cylinder3d from "./components/Three/Cylinder";
-import { Canvas } from "@react-three/fiber";
+import ASCII from "./components/Three/ASCII";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects.jsx";
 
@@ -14,6 +12,9 @@ function App() {
       <div className="wrapper">
         <Header />
         <Hero />
+          <div className="canvas-wrapper">
+              <ASCII/>
+          </div>
         <About />
         <Projects />
       </div>

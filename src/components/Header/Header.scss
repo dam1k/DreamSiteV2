@@ -7,7 +7,7 @@
   margin-bottom: 100px;
   backdrop-filter: blur(15px);
   padding-bottom: 10px;
-  z-index:1000 !important;
+  z-index: 1000 !important;
 
   &__logo {
     height: max-content;
@@ -73,6 +73,8 @@
     flex-direction: column;
     gap: 15px;
     transition: 0.25s;
+    mix-blend-mode: difference;
+    background-color: rgba(0, 0, 255, 0);
   }
 
   &__link {

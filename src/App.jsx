@@ -12,9 +12,9 @@ function App() {
       <div className="wrapper">
         <Header />
         <Hero />
-          <div className="canvas-wrapper">
-              <ASCII/>
-          </div>
+        {/*<div className="canvas-wrapper">*/}
+        {/*    <ASCII/>*/}
+        {/*</div>*/}
         <About />
         <Projects />
       </div>

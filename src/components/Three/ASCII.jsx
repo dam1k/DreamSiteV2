@@ -7,7 +7,6 @@ export default function ASCII() {
   return (
     <Canvas>
       <color attach="background" args={["black"]} />
-      npm
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
       <pointLight position={[-10, -10, -10]} />
       <Torusknot />

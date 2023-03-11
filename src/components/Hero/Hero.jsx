@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useLayoutEffect, useRef} from "react";
 import { gsap } from "gsap";
 import "./Hero.scss";
 
@@ -7,15 +7,34 @@ const heroText =
     " "
   );
 
-const Hero = () => {
+const Hero = ({animation}) => {
+
+    const comp = useRef();
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+
+            animation.from('.hero__word', {
+                y: 100,
+                ease: "power4.out",
+                delay: -0.5,
+                duration: 1.2,
+                stagger: {
+                    amount: 1
+                }
+
+            })
+        }, comp);
+        return () => ctx.revert();
+    }, []);
+
   return (
-    <div className="hero">
+    <div ref={comp} className="hero">
       <div className="hero__container">
-        <div className="hero__text">
+        <div className="hero__text" >
           {heroText.map((word, index) => {
             return (
-              <h2 key={index} className="overflow">
-                <span>{word}</span>
+              <h2 key={index}  className="overflow">
+                <div className="hero__word">{word}</div>
               </h2>
             );
           })}

@@ -64,7 +64,6 @@
 
 .nav {
   display: flex;
-  gap: 100px;
 
   // .nav__links
 
@@ -75,6 +74,10 @@
     transition: 0.25s;
     mix-blend-mode: difference;
     background-color: rgba(0, 0, 255, 0);
+
+    &:first-child {
+      min-width: 200px;
+    }
   }
 
   &__link {

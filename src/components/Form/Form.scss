@@ -1,0 +1,44 @@
+.form {
+  form {
+    margin-left: 200px;
+  }
+  margin-bottom: 500px;
+  input {
+    all: unset;
+    padding-bottom: 5px;
+    width: 100%;
+  }
+
+  textarea {
+    all: unset;
+    width: 100%;
+    resize: none;
+    overflow: auto;
+  }
+  // .form__container
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1100px);
+  }
+
+  // .form__title
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    text-indent: 200px;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+  }
+
+  // .form__field
+  &__field {
+  }
+
+  // .form__submit
+  &__submit {
+  }
+}
+
+.line {
+}

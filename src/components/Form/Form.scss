@@ -8,18 +8,18 @@
     padding-bottom: 5px;
     width: 100%;
   }
-  
-// input:-webkit-autofill,
-// input:-webkit-autofill:hover, 
-// input:-webkit-autofill:focus, 
-// input:-webkit-autofill:active{
-//     -webkit-box-shadow: 0 0 0 30px white inset !important;
-// }
+
+  // input:-webkit-autofill,
+  // input:-webkit-autofill:hover,
+  // input:-webkit-autofill:focus,
+  // input:-webkit-autofill:active{
+  //     -webkit-box-shadow: 0 0 0 30px white inset !important;
+  // }
 
   textarea {
     all: unset;
     width: 100%;
-    height:75px;
+    height: 75px;
     resize: none;
     white-space: pre-wrap;
   }
@@ -49,4 +49,12 @@
 }
 
 .line {
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px $black inset !important;
+  -webkit-text-fill-color: $white !important;
 }

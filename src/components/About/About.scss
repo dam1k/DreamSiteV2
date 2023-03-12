@@ -47,6 +47,16 @@
     }
   }
 
+  &__flex {
+    display: flex;
+    column-gap: 9px;
+    flex-wrap: wrap;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 46px;
+  }
+
   // .about__right
   &__right {
   }

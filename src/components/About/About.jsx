@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useLayoutEffect, useRef} from "react";
 import "./About.scss";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const titleArr =
   "With a focus on results-driven design and cutting-edge technology, we'll help you take your online presence to the next level".split(
@@ -11,19 +13,48 @@ const subTitleArr =
   );
 
 const About = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const comp = useRef();
+  useLayoutEffect(() => {
+      let ctx = gsap.context(() => {
+
+          gsap.from('.about__word', {
+              y: "100%",
+              ease: "power4.out",
+              // delay: -0.5,
+              duration: 1.2,
+              stagger: {
+                  amount: 1
+              },
+              scrollTrigger: {
+                trigger: ".about",
+                markers: true,
+                start: "bottom 85%"
+              }
+          })
+
+      });
+      return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="about">
+    <div ref={comp} className="about">
       <div className="about__container">
         <h2 className="about__title about__title--left overflow">
           <span>About</span> <span>01</span>
         </h2>
 
         <div className="about__right">
-          <h2 className="about__title about__title--uppercase overflow">
+          <div className="about__flex">
             {titleArr.map((word, index) => {
-              return <span key={index}>{word}</span>;
+              return (
+              <h2 className="about__title about__title--uppercase overflow">
+              <div className="about__word" key={index}>{word}</div>
+              </h2>)
             })}
-          </h2>
+            </div>
+    
 
           <div className="about__bottom">
             <div className="about__activity">

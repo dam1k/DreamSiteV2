@@ -5,6 +5,7 @@ import Hero from "./components/Hero/Hero";
 import ASCII from "./components/Three/ASCII";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects.jsx";
+import Form from "./components/Form/Form";
 import {gsap} from "gsap";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         </div>
         <About />
         <Projects />
+        <Form/>
       </div>
     </div>
   );

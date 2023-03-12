@@ -22,10 +22,11 @@ const Form = () => {
               return <span>{word + " "} </span>;
             })}
           </h2>
-          <form>
+          <form autoComplete="off">
             <div style={{ marginBottom: "1rem" }} className="form__field">
               <input
                 type="text"
+                autoComplete="off"
                 name="name"
                 placeholder="Name"
                 value={name}
@@ -37,6 +38,7 @@ const Form = () => {
             <div style={{ marginBottom: "1rem" }} className="form__field">
               <input
                 type="email"
+                autoComplete="off"
                 name="email"
                 placeholder="Email"
                 value={email}
@@ -48,6 +50,7 @@ const Form = () => {
             <div style={{ marginBottom: "1rem" }} className="form__field">
               <input
                 type="tel"
+                autoComplete="off"
                 name="tel"
                 placeholder="Phone number"
                 value={number}
@@ -58,8 +61,8 @@ const Form = () => {
 
             <div style={{ marginBottom: "1rem" }} className="form__field">
               <textarea
-                wrap="hard"
                 name="companyInfo"
+                autoComplete="off"
                 placeholder="Message"
                 value={companyInfo}
                 onChange={(e) => setCompanyInfo(e.target.value)}

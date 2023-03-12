@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useRef} from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import "./About.scss";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -17,44 +17,59 @@ const About = () => {
 
   const comp = useRef();
   useLayoutEffect(() => {
-      let ctx = gsap.context(() => {
-
-          gsap.from('.about__word', {
-              y: "100%",
-              ease: "power4.out",
-              // delay: -0.5,
-              duration: 1.2,
-              stagger: {
-                  amount: 1
-              },
-              scrollTrigger: {
-                trigger: ".about",
-                markers: true,
-                start: "bottom 85%"
-              }
-          })
-
+    let ctx = gsap.context(() => {
+      gsap.from(".about__title--span", {
+        y: "100%",
+        ease: "power4.out",
+        duration: 1.2,
+        stagger: {
+          amount: 0.5,
+        },
+        scrollTrigger: {
+          trigger: ".about__title--span",
+          // markers: true,
+          start: "bottom 90%",
+        },
       });
-      return () => ctx.revert();
+
+      gsap.from(".about__word", {
+        y: "100%",
+        ease: "power4.out",
+        // delay: -0.5,
+        duration: 1.2,
+        stagger: {
+          amount: 1,
+        },
+        scrollTrigger: {
+          trigger: ".about__word",
+          // markers: true,
+          start: "bottom 90%",
+        },
+      });
+    });
+    return () => ctx.revert();
   }, []);
 
   return (
     <div ref={comp} className="about">
       <div className="about__container">
         <h2 className="about__title about__title--left overflow">
-          <span>About</span> <span>01</span>
+          <span className="about__title--span">About</span>{" "}
+          <span className="about__title--span">01</span>
         </h2>
 
         <div className="about__right">
           <div className="about__flex">
             {titleArr.map((word, index) => {
               return (
-              <h2 className="about__title about__title--uppercase overflow">
-              <div className="about__word" key={index}>{word}</div>
-              </h2>)
+                <h2 className="about__title about__title--uppercase overflow">
+                  <div className="about__word" key={index}>
+                    {word}
+                  </div>
+                </h2>
+              );
             })}
-            </div>
-    
+          </div>
 
           <div className="about__bottom">
             <div className="about__activity">

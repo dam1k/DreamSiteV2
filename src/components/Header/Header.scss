@@ -36,12 +36,17 @@
     font-family: IBMPlexMono-Regular, sans-serif;
     display: flex;
     gap: 15px;
+
+    div {
+      display: flex;
+    }
   }
 
   // .header__link
 
   &__link {
     @include secondText;
+    transform: translateY(100%);
     color: $white;
     padding: 7px 15px;
     background-color: $greySecond;
@@ -77,7 +82,6 @@
     mix-blend-mode: difference;
     background-color: rgba(0, 0, 255, 0);
 
-
     &:first-child {
       min-width: 200px;
     }
@@ -89,7 +93,6 @@
     display: flex;
     gap: 5px;
     align-items: center;
-
 
     div {
       display: flex;
@@ -111,7 +114,7 @@
 //   //display: inline-block;
 // }
 
-@keyframes headerButtonsAnimation  {
-  from {transform:translateY(50px); opacity:0}
-  to {transform:translateY(0); opacity:1}
-}
+//@keyframes headerButtonsAnimation  {
+//  from {transform:translateY(50px); opacity:0}
+//  to {transform:translateY(0); opacity:1}
+//}

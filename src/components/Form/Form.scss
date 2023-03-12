@@ -1,10 +1,11 @@
 @import "../../variables";
 
 .form {
+  margin-bottom: 500px;
+
   form {
     margin-left: 200px;
   }
-  margin-bottom: 500px;
   input {
     all: unset;
     padding-bottom: 5px;

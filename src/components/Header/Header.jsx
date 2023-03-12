@@ -9,7 +9,7 @@ const Header = ({ animation }) => {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       animation.from(".header__logo img, .nav__link div", {
-        y: 100,
+        y: "110%",
         delay: 0.2,
         ease: "power4.out",
         duration: 1,
@@ -17,7 +17,22 @@ const Header = ({ animation }) => {
           amount: 0.5,
         },
       });
-
+      animation.fromTo(
+        ".header__link",
+        {
+          opacity: "0%",
+        },
+        {
+          y: "0%",
+          opacity: "100%",
+          delay: -1,
+          duration: 0.3,
+          ease: "power0.out",
+          stagger: {
+            amount: 0.3,
+          },
+        }
+      );
       // animation.fromTo('.header__links a', {
       //   y: 100,
       //   delay: 0.2,
@@ -77,14 +92,18 @@ const Header = ({ animation }) => {
               </li>
             </ul>
           </nav>
-          <div className="header__links overflow">
-            <a href="#" className="header__link">
-              Telegram
-            </a>
+          <div className="header__links">
+            <div className="overflow">
+              <a href="#" className="header__link">
+                Telegram
+              </a>
+            </div>
 
-            <a href="#" className="header__link header__link--active">
-              +373(22)71-09-40
-            </a>
+            <div className="overflow">
+              <a href="#" className="header__link header__link--active">
+                +373(22)71-09-40
+              </a>
+            </div>
           </div>
         </div>
       </div>

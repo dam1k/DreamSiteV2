@@ -27,11 +27,20 @@
 
   // .form__title
   &__title {
+    display: flex;
+    flex-wrap: wrap;
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
-    text-indent: 200px;
+    column-gap: 5px;
     text-transform: uppercase;
+
+    h2:first-child {
+      margin-left: 200px;
+    }
+  }
+
+  &__text {
     margin-bottom: 100px;
   }
 

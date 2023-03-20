@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import "./Form.scss";
+import gsap from "gsap";
+import { useNavigate } from "react-router-dom";
 
 const formTitle =
   "With a focus on results-driven design and cutting-edge technology, we'll help you take your online presence to the next lev".split(
@@ -11,18 +13,64 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [companyInfo, setCompanyInfo] = useState("");
+  const navigate = useNavigate();
+
+  const comp = useRef();
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(".form__title div", {
+        y: "100%",
+        ease: "power4.out",
+        duration: 1.2,
+        stagger: {
+          amount: 0.5,
+        },
+        scrollTrigger: {
+          trigger: ".form__title",
+          // markers: true,
+          start: "bottom 90%",
+        },
+      });
+      gsap.from(".line--form", {
+        width: "0%",
+        ease: "power4.out",
+        // delay: -0.5,
+        duration: 3,
+        stagger: {
+          amount: 2,
+        },
+        scrollTrigger: {
+          trigger: ".line--form",
+          // markers: true,
+          start: "bottom 90%",
+        },
+      });
+    }, comp);
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <div className="form" id="form">
+    <div ref={comp} className="form" id="form">
       <div className="form__container">
         <div></div>
         <div>
-          <h2 className="form__title">
-            {formTitle.map((word) => {
-              return <span>{word + " "} </span>;
-            })}
-          </h2>
-          <form autoComplete="off">
+          <div className="form__text">
+            <div className="form__title">
+              {formTitle.map((word, index) => {
+                return (
+                  <h2 className="overflow">
+                    <div key={index}>
+                      {word}
+                    </div>
+                  </h2>
+                );
+              })}
+            </div>
+          </div>
+          <form autoComplete="off" 
+          action="https://formsubmit.co/dream.site.md1@gmail.com"
+          method="POST"
+          onSubmit={() => navigate('/')}>
             <div style={{ marginBottom: "1rem" }} className="form__field">
               <input
                 type="text"
@@ -32,7 +80,7 @@ const Form = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
-              <hr className="line" />
+              <hr className="line line--form" />
             </div>
 
             <div style={{ marginBottom: "1rem" }} className="form__field">
@@ -44,7 +92,7 @@ const Form = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <hr className="line" />
+              <hr className="line line--form" />
             </div>
 
             <div style={{ marginBottom: "1rem" }} className="form__field">
@@ -56,7 +104,7 @@ const Form = () => {
                 value={number}
                 onChange={(e) => setNumber(e.target.value)}
               />
-              <hr className="line" />
+              <hr className="line line--form" />
             </div>
 
             <div style={{ marginBottom: "1rem" }} className="form__field">
@@ -67,9 +115,11 @@ const Form = () => {
                 value={companyInfo}
                 onChange={(e) => setCompanyInfo(e.target.value)}
               ></textarea>
-              <hr className="line" />
+              <hr className="line line--form" />
             </div>
 
+            <input type="hidden" name="_captcha" value="false"/>
+            <input type="hidden" name="_next" value="https://dreamsite.md"></input>
             <button type="submit" className="form__submit">
               Send
             </button>

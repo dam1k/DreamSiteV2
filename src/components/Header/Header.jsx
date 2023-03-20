@@ -3,11 +3,14 @@ import logo from "../../assets/logo.svg";
 import arrowupright from "../../assets/arrowupright.svg";
 import "./Header.scss";
 import { gsap } from "gsap";
+
 const Header = ({ animation }) => {
   const comp = useRef();
   const buttonsRef = useRef();
+
   useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
+    let ctx = gsap.context
+    (() => {
       animation.from(".header__logo img, .nav__link div", {
         y: "110%",
         delay: 0.2,
@@ -33,18 +36,6 @@ const Header = ({ animation }) => {
           },
         }
       );
-      // animation.fromTo('.header__links a', {
-      //   y: 100,
-      //   delay: 0.2,
-      //   ease: "power4.out",
-      //   duration: 0.7
-      //   // stagger: {
-      //   //   amount: 0.5
-      //   // }
-
-      // }
-
-      // )
     }, comp);
 
     return () => ctx.revert();

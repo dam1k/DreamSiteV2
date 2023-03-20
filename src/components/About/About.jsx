@@ -46,6 +46,35 @@ const About = () => {
           start: "bottom 90%",
         },
       });
+      
+      gsap.from(".about__activity span, .about__activity h2 div", {
+        y: "100%",
+        ease: "power4.out",
+        // delay: -0.5,
+        duration: 1.2,
+        stagger: {
+          amount: 1,
+        },
+        scrollTrigger: {
+          trigger: ".about__bottom",
+          // markers: true,
+          start: "bottom 90%",
+        },
+      });
+      gsap.from(".about__subtitle h3 div", {
+        y: "100%",
+        ease: "power4.out",
+        delay: 0.75,
+        duration: 1,
+        stagger: {
+          amount: 1.2,
+        },
+        scrollTrigger: {
+          trigger: ".about__bottom",
+          // markers: true,
+          start: "bottom 90%",
+        },
+      });
     });
     return () => ctx.revert();
   }, []);
@@ -77,18 +106,29 @@ const About = () => {
                 <span>2021</span> <span>(Beginning)</span>
               </h3>
               <h2 className="overflow">
-                <span>Founded in 2022</span>
+                <div>Founded in 2022</div>
               </h2>
               <h3 className="overflow">
                 <span>2023</span> <span>(Active)</span>
               </h3>
             </div>
 
-            <h3 className="about__subtitle overflow">
+            {/* <h3 className="about__subtitle">
               {subTitleArr.map((word, index) => {
-                return <span key={index}>{word}</span>;
+                return <span className="overflow" key={index}>{word}</span>;
               })}
-            </h3>
+            </h3> */}
+            <div className="about__subtitle">
+              {subTitleArr.map((word, index) => {
+                return (
+                  <h3 className="overflow">
+                    <div key={index}>
+                      {word}
+                    </div>
+                  </h3>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

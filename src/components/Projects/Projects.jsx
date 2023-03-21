@@ -4,6 +4,7 @@ import projects from "../../data/projects";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const projectsTitleOne =
   "We are a team of talented, hard working individuals. Our purpose is to help you achieve the success you deserve by bringing your business to the online world.".split(
@@ -19,6 +20,7 @@ const Projects = () => {
   gsap.registerPlugin(ScrollTrigger);
   const [projectToShow, setProjectToShow] = useState(1);
   const comp = useRef();
+  const navigate = useNavigate();
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -85,9 +87,7 @@ const Projects = () => {
     if (projectId === projectToShow) {
       setProjectToShow(0);
     } else {
-      // setTimeout(() => {
         setProjectToShow(projectId);
-      // }, 100);
     }
   };
 
@@ -101,16 +101,19 @@ const Projects = () => {
         <div className="projects__list">
           {projects.map((project) => {
             return (
-              <div key={project.id}>
+              <div key={project.id} id={`project-${project.id}`}>
                 <hr className="line line--projects" />
+                <a href={project.id === projectToShow && `#project-${project.id}`}>
                 <motion.div initial={false} 
                 layout
                 className="projects__dropdown">
                   <div
                     className="projects__text"
                     onClick={(e) => {
-                      console.log(e.target.className);
                       handleClick(project.id);
+                      if(project.id === projectToShow) {
+                        navigate("/");
+                      }
                     }}
                   >
                     <h2 className="projects__name overflow">
@@ -121,6 +124,7 @@ const Projects = () => {
                     </h2>
                   </div>
                 </motion.div>
+                </a>
                 <AnimatePresence 
                 mode="wait" 
                 initial={false}>

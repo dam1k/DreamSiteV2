@@ -85,9 +85,9 @@ const Projects = () => {
     if (projectId === projectToShow) {
       setProjectToShow(0);
     } else {
-      setTimeout(() => {
+      // setTimeout(() => {
         setProjectToShow(projectId);
-      }, 100);
+      // }, 100);
     }
   };
 
@@ -103,7 +103,9 @@ const Projects = () => {
             return (
               <div key={project.id}>
                 <hr className="line line--projects" />
-                <motion.div initial={false} className="projects__dropdown">
+                <motion.div initial={false} 
+                layout
+                className="projects__dropdown">
                   <div
                     className="projects__text"
                     onClick={(e) => {
@@ -119,10 +121,12 @@ const Projects = () => {
                     </h2>
                   </div>
                 </motion.div>
-                <AnimatePresence mode="wait" initial={false}>
+                <AnimatePresence 
+                mode="wait" 
+                initial={false}>
                   {project.id === projectToShow ? (
                     <motion.div
-                      // key="content"
+                      key="content"
                       initial="collapsed"
                       animate="open"
                       exit="collapsed"
@@ -131,10 +135,14 @@ const Projects = () => {
                         duration: 0.8,
                         ease: [0.04, 0.62, 0.23, 0.98],
                       }}
+                      layout
                       className="projects__info"
                     >
                       <div className="projects__grid">
-                        <div></div>
+                        <motion.div 
+                        layout
+                        initial="false">
+                        </motion.div>
                         <div className="projects__info-inner">
                           <div className="projects__info-text">
                             <h2 className="projects__info-title overflow">
@@ -161,7 +169,6 @@ const Projects = () => {
                     </motion.div>
                   ) : null}
                 </AnimatePresence>
-                {/* </motion.div> */}
               </div>
             );
           })}

@@ -10,14 +10,15 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
-        <div className="wrapper">
-          <Header animation={animation} />
-          <Routes>
-            <Route path="/" element={<Home animation={animation} />} />
-          </Routes>
-        </div>
+    <div className="App">
+      <div className="wrapper">
+        <Header animation={animation}/>
+       <Routes>
+        <Route path="/" element={<Home animation={animation}/>}/>
+        {/* <Route path="/blog" element={<Blog />}/> */}
+       </Routes>
       </div>
+    </div>
     </BrowserRouter>
   );
 }

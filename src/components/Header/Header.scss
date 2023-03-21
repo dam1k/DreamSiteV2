@@ -6,6 +6,7 @@
   top: 0;
   margin-bottom: 100px;
   z-index: 1000 !important;
+  pointer-events: none;
 
   &__logo {
     height: max-content;

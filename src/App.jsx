@@ -14,6 +14,7 @@ function App() {
         <Header animation={animation}/>
        <Routes>
         <Route path="/" element={<Home animation={animation}/>}/>
+        {/* <Route path="/blog" element={<Blog />}/> */}
        </Routes>
       </div>
     </div>

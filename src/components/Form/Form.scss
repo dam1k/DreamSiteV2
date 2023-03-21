@@ -10,6 +10,23 @@
     all: unset;
     padding-bottom: 5px;
     width: 100%;
+    font-family: IBMPlexMono-Regular;
+    font-size: 14px;
+    border-bottom: 1px solid $black;
+    transition: 0.25s;
+
+    &::placeholder {
+      text-transform: uppercase;
+    }
+
+    &:focus {
+      border-bottom: 1px solid $white;
+      transition: 0.5s;
+    }
+    &:focus::placeholder {
+      color: transparent;
+      transition: 0.5s;
+    }
   }
 
   textarea {
@@ -23,6 +40,14 @@
   &__container {
     display: grid;
     grid-template-columns: minmax(auto, 1fr) minmax(auto, 1100px);
+  }
+
+  &__subtitle {
+    font-family: IBMPlexMono-Regular;
+    color: $grey;
+    font-size: 14px;
+    margin-left: 200px;
+    margin-bottom: 10px;
   }
 
   // .form__title

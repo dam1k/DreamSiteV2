@@ -9,8 +9,7 @@ const Header = ({ animation }) => {
   const buttonsRef = useRef();
 
   useLayoutEffect(() => {
-    let ctx = gsap.context
-    (() => {
+    let ctx = gsap.context(() => {
       animation.from(".header__logo img, .nav__link div", {
         y: "110%",
         delay: 0.2,
@@ -86,7 +85,7 @@ const Header = ({ animation }) => {
           <div className="header__links">
             <div className="overflow">
               <a href="#" className="header__link">
-                Telegram
+                ↳ Telegram
               </a>
             </div>
 

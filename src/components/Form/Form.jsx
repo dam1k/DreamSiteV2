@@ -37,7 +37,7 @@ const Form = () => {
         // delay: -0.5,
         duration: 3,
         stagger: {
-          amount: 2,
+          amount: 0.5,
         },
         scrollTrigger: {
           trigger: ".line--form",
@@ -54,23 +54,26 @@ const Form = () => {
       <div className="form__container">
         <div></div>
         <div>
+          <h2 className="form__subtitle overflow">
+            <div>BRIFIENG</div>
+          </h2>
           <div className="form__text">
             <div className="form__title">
               {formTitle.map((word, index) => {
                 return (
                   <h2 className="overflow">
-                    <div key={index}>
-                      {word}
-                    </div>
+                    <div key={index}>{word}</div>
                   </h2>
                 );
               })}
             </div>
           </div>
-          <form autoComplete="off" 
-          action="https://formsubmit.co/dream.site.md1@gmail.com"
-          method="POST"
-          onSubmit={() => navigate('/')}>
+          <form
+            autoComplete="off"
+            action="https://formsubmit.co/dream.site.md1@gmail.com"
+            method="POST"
+            onSubmit={() => navigate("/")}
+          >
             <div style={{ marginBottom: "1rem" }} className="form__field">
               <input
                 type="text"
@@ -118,8 +121,12 @@ const Form = () => {
               <hr className="line line--form" />
             </div>
 
-            <input type="hidden" name="_captcha" value="false"/>
-            <input type="hidden" name="_next" value="https://dreamsite.md"></input>
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://dreamsite.md"
+            ></input>
             <button type="submit" className="form__submit">
               Send
             </button>

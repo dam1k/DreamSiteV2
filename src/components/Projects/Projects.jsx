@@ -36,6 +36,20 @@ const Projects = () => {
         },
       });
 
+      gsap.from(".projects__name div, .projects__desc div", {
+        y: "100%",
+        ease: "power4.out",
+        duration: 1.2,
+        stagger: {
+          amount: 1,
+        },
+        scrollTrigger: {
+          trigger: ".projects__title",
+          // markers: true,
+          start: "bottom 90%",
+        },
+      });
+
       gsap.from(".line--projects", {
         width: "0%",
         ease: "power4.out",
@@ -98,10 +112,10 @@ const Projects = () => {
                     }}
                   >
                     <h2 className="projects__name overflow">
-                      <span>{project.name}</span>
+                      <div>{project.name}</div>
                     </h2>
                     <h2 className="projects__desc overflow">
-                      <span>{project.type}</span>
+                      <div>{project.type}</div>
                     </h2>
                   </div>
                 </motion.div>

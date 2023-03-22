@@ -82,6 +82,7 @@ const Form = () => {
                 placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                className="form__input"
               />
               <hr className="line line--form" />
             </div>
@@ -94,6 +95,7 @@ const Form = () => {
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                className="form__input"
               />
               <hr className="line line--form" />
             </div>
@@ -106,6 +108,7 @@ const Form = () => {
                 placeholder="Phone number"
                 value={number}
                 onChange={(e) => setNumber(e.target.value)}
+                className="form__input"
               />
               <hr className="line line--form" />
             </div>
@@ -138,5 +141,3 @@ const Form = () => {
 };
 
 export default Form;
-
-

@@ -18,15 +18,6 @@
     &::placeholder {
       text-transform: uppercase;
     }
-
-    &:focus {
-      border-bottom: 1px solid $white;
-      transition: 0.5s;
-    }
-    &:focus::placeholder {
-      color: transparent;
-      transition: 0.5s;
-    }
   }
 
   textarea {
@@ -34,7 +25,13 @@
     width: 100%;
     height: 75px;
     resize: none;
+    font-size: 14px;
     white-space: pre-wrap;
+    font-family: IBMPlexMono-Regular;
+
+    &::placeholder {
+      text-transform: uppercase;
+    }
   }
   // .form__container
   &__container {
@@ -77,6 +74,21 @@
   &__submit {
     all: unset;
     cursor: pointer;
+    @include secondText;
+    transform: translateY(100%);
+    color: $white;
+    padding: 7px 15px;
+    background-color: $greySecond;
+    border: 1px solid $greySecond;
+    border-radius: $radius;
+    transition: 0.25s;
+    backdrop-filter: blur(15px);
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+      border: 1px solid $white;
+    }
   }
 }
 

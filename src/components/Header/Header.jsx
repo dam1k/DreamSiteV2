@@ -3,6 +3,7 @@ import logo from "../../assets/logo.svg";
 import arrowupright from "../../assets/arrowupright.svg";
 import "./Header.scss";
 import { gsap } from "gsap";
+import Preloader from "../Preloader/Preloader.jsx";
 
 const Header = ({ animation }) => {
   const comp = useRef();
@@ -41,63 +42,67 @@ const Header = ({ animation }) => {
   }, []);
 
   return (
-    <header ref={comp} className="header">
-      <div className="header__container">
-        <a href="#" className="header__logo">
-          <div className="header__logo overflow">
-            <img src={logo} alt="Logo" />
-          </div>
-        </a>
-        <div className="header__right">
-          <nav className="nav">
-            <ul className="nav__links">
-              <li>
-                <a href="#projects" className="nav__link overflow">
-                  <div>
-                    Projects<i className="ri-arrow-right-up-line"></i>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav__link overflow">
-                  <div>About</div>
-                </a>
-              </li>
-            </ul>
-            <ul className="nav__links">
-              <li>
-                <a href="#" className="nav__link overflow">
-                  <div>Instagram</div>
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav__link overflow">
-                  <div>Facebook</div>
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav__link overflow">
-                  <div>Behance</div>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div className="header__links">
-            <div className="overflow">
-              <a href="#" className="header__link">
-                ↳ Telegram
-              </a>
+    <>
+      {/*<div className="preloader"></div>*/}
+      <Preloader />
+      <header ref={comp} className="header">
+        <div className="header__container">
+          <a href="#" className="header__logo">
+            <div className="header__logo overflow">
+              <img src={logo} alt="Logo" />
             </div>
+          </a>
+          <div className="header__right">
+            <nav className="nav">
+              <ul className="nav__links">
+                <li>
+                  <a href="#projects" className="nav__link overflow">
+                    <div>
+                      Projects<i className="ri-arrow-right-up-line"></i>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="nav__link overflow">
+                    <div>About</div>
+                  </a>
+                </li>
+              </ul>
+              <ul className="nav__links">
+                <li>
+                  <a href="#" className="nav__link overflow">
+                    <div>Instagram</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="nav__link overflow">
+                    <div>Facebook</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="nav__link overflow">
+                    <div>Behance</div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div className="header__links">
+              <div className="overflow">
+                <a href="#" className="header__link">
+                  ↳ Telegram
+                </a>
+              </div>
 
-            <div className="overflow">
-              <a href="#" className="header__link header__link--active">
-                +373(22)71-09-40
-              </a>
+              <div className="overflow">
+                <a href="#" className="header__link header__link--active">
+                  +373(22)71-09-40
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 

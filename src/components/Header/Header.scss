@@ -11,6 +11,7 @@
   &__logo {
     height: max-content;
     width: max-content;
+    pointer-events: auto;
   }
 
   // .header__container
@@ -35,7 +36,7 @@
     font-family: IBMPlexMono-Regular, sans-serif;
     display: flex;
     gap: 15px;
-
+    pointer-events: auto;
     div {
       display: flex;
     }
@@ -53,7 +54,6 @@
     border-radius: $radius;
     transition: 0.25s;
     backdrop-filter: blur(15px);
-    animation: headerButtonsAnimation 1s ease-in-out;
 
     &:hover {
       background-color: $black;
@@ -89,6 +89,7 @@
     display: flex;
     gap: 5px;
     align-items: center;
+    pointer-events: auto;
 
     div {
       display: flex;

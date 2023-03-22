@@ -103,19 +103,12 @@ const Projects = () => {
             return (
               <div key={project.id} id={`project-${project.id}`}>
                 <hr className="line line--projects" />
-                <a href={project.id === projectToShow && `#project-${project.id}`}>
                 <motion.div initial={false} 
                 layout
                 className="projects__dropdown">
                   <div
                     className="projects__text"
-                    onClick={(e) => {
-                      handleClick(project.id);
-                      if(project.id === projectToShow) {
-                        navigate("/");
-                      }
-                    }}
-                  >
+                    onClick={() => handleClick(project.id)}>
                     <h2 className="projects__name overflow">
                       <div>{project.name}</div>
                     </h2>
@@ -124,7 +117,6 @@ const Projects = () => {
                     </h2>
                   </div>
                 </motion.div>
-                </a>
                 <AnimatePresence 
                 mode="wait" 
                 initial={false}>

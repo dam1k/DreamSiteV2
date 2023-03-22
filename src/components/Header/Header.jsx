@@ -3,7 +3,6 @@ import logo from "../../assets/logo.svg";
 import arrowupright from "../../assets/arrowupright.svg";
 import "./Header.scss";
 import { gsap } from "gsap";
-import Preloader from "../Preloader/Preloader.jsx";
 
 const Header = ({ animation }) => {
   const comp = useRef();
@@ -43,8 +42,6 @@ const Header = ({ animation }) => {
 
   return (
     <>
-      {/*<div className="preloader"></div>*/}
-      <Preloader />
       <header ref={comp} className="header">
         <div className="header__container">
           <a href="#" className="header__logo">

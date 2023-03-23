@@ -8,17 +8,27 @@ import Preloader from "./components/Preloader/Preloader";
 // import logo from "assets/logo.svg";
 
 function App() {
-  const [showPreloader, setShowPreloader] = useState(false);
+  const [showPreloader, setShowPreloader] = useState(true);
+  // const [documentHasLoaded, setDocumentHasLoaded] = useState(document.readyState);
   let animation = gsap.timeline();
+ 
   useEffect(() => {
-    if (!sessionStorage.getItem("firstVisit")) {
-      setShowPreloader(true);
-      sessionStorage.setItem("firstVisit", false);
+    const onPageLoad = () => {
       setTimeout(() => {
         setShowPreloader(false);
       }, 1000);
+    };
+
+    if (document.readyState === 'complete') {
+      onPageLoad();
+    } 
+    else {
+      window.addEventListener('load', onPageLoad);
+
+      return () => window.removeEventListener('load', onPageLoad);
     }
   }, []);
+
 
   return (
     <BrowserRouter>

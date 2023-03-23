@@ -20,7 +20,6 @@ const Projects = () => {
   gsap.registerPlugin(ScrollTrigger);
   const [projectToShow, setProjectToShow] = useState(1);
   const comp = useRef();
-  const navigate = useNavigate();
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {

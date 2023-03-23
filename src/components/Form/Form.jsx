@@ -18,7 +18,7 @@ const Form = () => {
   const comp = useRef();
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from(".form__title div", {
+      gsap.from(".form__title div, .form__subtitle div", {
         y: "100%",
         ease: "power4.out",
         duration: 1.2,
@@ -74,7 +74,7 @@ const Form = () => {
             method="POST"
             onSubmit={() => navigate("/")}
           >
-            <div style={{ marginBottom: "1rem" }} className="form__field">
+            <div style={{ marginBottom: "20px" }} className="form__field">
               <input
                 type="text"
                 autoComplete="off"
@@ -87,7 +87,7 @@ const Form = () => {
               <hr className="line line--form" />
             </div>
 
-            <div style={{ marginBottom: "1rem" }} className="form__field">
+            <div style={{ marginBottom: "20px" }} className="form__field">
               <input
                 type="email"
                 autoComplete="off"
@@ -100,7 +100,7 @@ const Form = () => {
               <hr className="line line--form" />
             </div>
 
-            <div style={{ marginBottom: "1rem" }} className="form__field">
+            <div style={{ marginBottom: "20px" }} className="form__field">
               <input
                 type="tel"
                 autoComplete="off"
@@ -113,7 +113,7 @@ const Form = () => {
               <hr className="line line--form" />
             </div>
 
-            <div style={{ marginBottom: "1rem" }} className="form__field">
+            <div style={{ marginBottom: "20px" }} className="form__field">
               <textarea
                 name="companyInfo"
                 autoComplete="off"

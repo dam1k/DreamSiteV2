@@ -10,7 +10,7 @@ export default function ASCII() {
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
       <pointLight position={[-10, -10, -10]} />
       <Torusknot />
-      <OrbitControls enableZoom={false} />
+      {/*<OrbitControls enableZoom={false} />*/}
       <AsciiRenderer fgColor="white" bgColor="black" />
     </Canvas>
   );

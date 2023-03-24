@@ -122,3 +122,38 @@
     color: $grey;
   }
 }
+
+@media only screen and (max-width: 1100px) {
+  .about__container {
+  grid-template-columns: 1fr;
+  }
+  .about__flex {
+    gap: 4px;
+  }
+  .about__title {
+    position: static;
+    font-size: 20px;
+    line-height: 26px;
+    gap: 4px;
+    &:first-child {
+      margin-left: 0 !important;
+    }
+  }
+
+  .about__title--left {
+    font-size: 35px;
+    line-height: 46px;
+    margin-bottom: 25px;
+  }
+
+  .about__bottom {
+    margin: 0;
+    margin-top: 75px;
+  }
+
+  .about__activity {
+    h2 {
+      font-size: 20px;
+    }
+  }
+}

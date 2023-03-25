@@ -1,19 +1,21 @@
 $container: 1400px;
 
-$black: #000;
+$black: black;
 $white: #fff;
 $grey: rgba(255, 255, 255, 0.5);
 $greySecond: rgba(255, 255, 255, 0.25);
+$greyThird: rgba(30, 30, 30, 0.75);
 $radius: 7px;
 $line: #1e1e1e;
+$lineWhite: #ededed;
 
 @mixin secondText {
-  font-family: "IBMPlexMono-Regular";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-  color: $grey;
+    font-family: "IBMPlexMono-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: $grey;
 }

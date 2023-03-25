@@ -1,38 +1,103 @@
+@import "../../variables";
+
 .footer {
-     padding-top: 100px;
-     padding-bottom: 25px;
-     height: 500px;
-     background-color: #fff;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 25px;
+    height: 500px;
+    min-height: 500px;
+    background-color: #fff;
+    backface-visibility: hidden;
+    user-select: none;
+    overflow: hidden !important;
+    z-index: 1;
 
-     &__container {
-          display: grid;
-          grid-template-columns: minmax(auto, 1fr) minmax(auto, 1100px);
-     }
-     &__title {
-          display: flex;
-          column-gap: 13px;
-          flex-wrap: wrap;
-          font-family: "Red Hat Display";
-          font-style: normal;
-          font-weight: 500;
-          font-size: 55px;
-          line-height: 73px;
-          text-transform: uppercase;
-          color:#000;
-          div:first-child {
+    &__container {
+        position: fixed;
+        display: grid;
+        grid-template-columns: minmax(auto, 1fr) minmax(auto, 1100px);
+        height: 375px;
+        max-height: 375px;
+        bottom: 25px;
+        right: 0;
+        left: 0;
+    }
+    &__title {
+        display: flex;
+        column-gap: 13px;
+        flex-wrap: wrap;
+        font-family: "Red Hat Display";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 55px;
+        line-height: 73px;
+        text-transform: uppercase;
+        color: #000;
+        div:first-child {
             margin-left: 200px;
-          }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $black;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        nav ul {
+            display: flex;
+            column-gap: 15px;
         }
 
-        &__left {
-          nav ul{
-               display: flex;
-               flex-direction: column;
-               justify-content: end;
+        nav ul li {
+            font-family: IBMPlexMono-Regular, serif;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+            a {
+                transition: 0.25s;
+                color: $black;
+            }
+            &:hover {
+                a {
+                    color: $greyThird;
+                }
+            }
         }
-        }
+    }
 
-        &__link {
-          color: black;
-        }
+    &__copyright {
+        margin-left: 200px;
+        display: flex;
+        column-gap: 8px;
+        font-family: IBMPlexMono-Regular, serif;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        color: black;
+    }
+}
+
+.hero,
+.about,
+.projects,
+.form,
+.canvas-wrapper {
+    position: relative;
+    z-index: 5;
 }

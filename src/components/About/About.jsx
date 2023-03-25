@@ -86,7 +86,9 @@ const About = () => {
           <span className="about__title--span">About</span>{" "}
           <span className="about__title--span">01</span>
         </h2>
-
+        </div>
+        <div className="about__container about__container--grid">
+            <div></div>
         <div className="about__right">
           <div className="about__flex">
             {titleArr.map((word, index) => {

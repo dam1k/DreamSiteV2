@@ -1,122 +1,157 @@
 @import "../../variables";
 
 .header {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  margin-bottom: 100px;
-  z-index: 10;
-  pointer-events: none;
-
-  &__logo {
-    height: max-content;
-    width: max-content;
-    pointer-events: auto;
-  }
-
-  // .header__container
-
-  &__container {
-    display: grid;
-    grid-template-columns: 1fr minmax(auto, 900px);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    margin-bottom: 100px;
+    z-index: 10;
+    pointer-events: none;
     padding-top: 35px;
-  }
 
-  // .header__right
-
-  &__right {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-  }
-
-  // .header__links
-
-  &__links {
-    font-family: IBMPlexMono-Regular, sans-serif;
-    display: flex;
-    gap: 15px;
-    pointer-events: auto;
-    div {
-      display: flex;
-    }
-  }
-
-  // .header__link
-
-  &__link {
-    @include secondText;
-    transform: translateY(100%);
-    color: $white;
-    padding: 7px 15px;
-    background-color: $greySecond;
-    border: 1px solid $greySecond;
-    border-radius: $radius;
-    transition: 0.25s;
-    backdrop-filter: blur(15px);
-
-    &:hover {
-      background-color: $black;
-      color: $white;
-      border: 1px solid $white;
+    &__logo {
+        height: max-content;
+        width: max-content;
+        pointer-events: auto;
     }
 
-    &--active {
-      background-color: $white;
-      color: $black;
+    // .header__container
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 900px);
     }
-  }
+
+    // .header__right
+
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    // .header__links
+
+    &__links {
+        font-family: IBMPlexMono-Regular, sans-serif;
+        display: flex;
+        gap: 15px;
+        pointer-events: auto;
+        div {
+            display: flex;
+        }
+    }
+
+    // .header__link
+
+    &__link {
+        @include secondText;
+        transform: translateY(100%);
+        color: $white;
+        padding: 7px 15px;
+        background-color: $greySecond;
+        border: 1px solid $greySecond;
+        border-radius: $radius;
+        transition: 0.25s;
+        backdrop-filter: blur(15px);
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+            border: 1px solid $white;
+        }
+
+        &--active {
+            background-color: $white;
+            color: $black;
+        }
+    }
 }
 
 .nav {
-  display: flex;
-  gap: 75px;
-
-  // .nav__links
-
-  &__links {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    transition: 0.25s;
-    mix-blend-mode: difference;
-    background-color: rgba(0, 0, 255, 0);
-  }
+    gap: 75px;
 
-  &__link {
-    @include secondText;
-    transition: 0.25s;
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    pointer-events: auto;
+    // .nav__links
 
-    div {
-      display: flex;
-      gap: 5px;
-      align-items: center;
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        transition: 0.25s;
+        mix-blend-mode: difference;
+        background-color: rgba(0, 0, 255, 0);
     }
 
-    i {
-      font-size: 16px;
+    &__link {
+        @include secondText;
+        transition: 0.25s;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        pointer-events: auto;
+
+        div {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        i {
+            font-size: 16px;
+        }
     }
-  }
 }
 
 .nav__links:hover a {
-  filter: blur(3px);
+    filter: blur(3px);
 }
 
 .nav__links a:hover {
-  color: white;
-  filter: blur(0);
+    color: white;
+    filter: blur(0);
 }
 
 @media only screen and (max-width: 1100px) {
-  .header__container {
+    .header__container {
+    }
+    .header__right {
+        display: none;
+    }
+}
 
-  }
-  .header__right {
+.overlay {
     display: none;
-  }
+}
+
+@media only screen and (max-width: 1400px) {
+    .overlay {
+        display: unset;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        margin: 0 15px;
+        border: 1px solid $line;
+        border-top: none;
+        border-bottom: none;
+        z-index: 100000;
+        pointer-events: none;
+    }
+    .header__container {
+        border-bottom: 1px solid $line;
+        border-top: 1px solid $line;
+    }
+    .hero__container {
+        border-bottom: 1px solid $line;
+        border-top: 1px solid $line;
+    }
+    .about__container {
+        border-bottom: 1px solid $line;
+        border-top: 1px solid $line;
+    }
+    .projects__container {
+        border-top: 1px solid $line;
+    }
 }

@@ -1,95 +1,96 @@
 @import "../../variables";
 
 .form {
-  margin-bottom: 500px;
+    margin-bottom: 500px;
+    margin-top: 300px;
 
-  form {
-    margin-left: 200px;
-  }
-  input {
-    all: unset;
-    padding-bottom: 5px;
-    width: 100%;
-    font-family: IBMPlexMono-Regular;
-    font-size: 14px;
-    border-bottom: 1px solid $black;
-    transition: 0.25s;
-
-    &::placeholder {
-      text-transform: uppercase;
+    form {
+        margin-left: 200px;
     }
-  }
+    input {
+        all: unset;
+        padding-bottom: 5px;
+        width: 100%;
+        font-family: IBMPlexMono-Regular;
+        font-size: 14px;
+        border-bottom: 1px solid $black;
+        transition: 0.25s;
 
-  textarea {
-    all: unset;
-    width: 100%;
-    height: 75px;
-    resize: none;
-    font-size: 14px;
-    white-space: pre-wrap;
-    font-family: IBMPlexMono-Regular;
-
-    &::placeholder {
-      text-transform: uppercase;
+        &::placeholder {
+            text-transform: uppercase;
+        }
     }
-  }
-  // .form__container
-  &__container {
-    display: grid;
-    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1100px);
-  }
 
-  &__subtitle {
-    font-family: IBMPlexMono-Regular;
-    color: $grey;
-    font-size: 14px;
-    margin-left: 200px;
-    margin-bottom: 10px;
-  }
+    textarea {
+        all: unset;
+        width: 100%;
+        height: 75px;
+        resize: none;
+        font-size: 14px;
+        white-space: pre-wrap;
+        font-family: IBMPlexMono-Regular;
 
-  // .form__title
-  &__title {
-    display: flex;
-    flex-wrap: wrap;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 26px;
-    column-gap: 5px;
-    text-transform: uppercase;
-
-    h2:first-child {
-      margin-left: 200px;
+        &::placeholder {
+            text-transform: uppercase;
+        }
     }
-  }
-
-  &__text {
-    margin-bottom: 100px;
-  }
-
-  // .form__field
-  &__field {
-  }
-
-  // .form__submit
-  &__submit {
-    all: unset;
-    cursor: pointer;
-    @include secondText;
-    transform: translateY(100%);
-    color: $white;
-    padding: 7px 15px;
-    background-color: $greySecond;
-    border: 1px solid $greySecond;
-    border-radius: $radius;
-    transition: 0.25s;
-    backdrop-filter: blur(15px);
-
-    &:hover {
-      background-color: $black;
-      color: $white;
-      border: 1px solid $white;
+    // .form__container
+    &__container {
+        display: grid;
+        grid-template-columns: minmax(auto, 1fr) minmax(auto, 1100px);
     }
-  }
+
+    &__subtitle {
+        font-family: IBMPlexMono-Regular;
+        color: $grey;
+        font-size: 14px;
+        margin-left: 200px;
+        margin-bottom: 10px;
+    }
+
+    // .form__title
+    &__title {
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        column-gap: 5px;
+        text-transform: uppercase;
+
+        h2:first-child {
+            margin-left: 200px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 100px;
+    }
+
+    // .form__field
+    &__field {
+    }
+
+    // .form__submit
+    &__submit {
+        all: unset;
+        cursor: pointer;
+        @include secondText;
+        transform: translateY(100%);
+        color: $white;
+        padding: 7px 15px;
+        background-color: $greySecond;
+        border: 1px solid $greySecond;
+        border-radius: $radius;
+        transition: 0.25s;
+        backdrop-filter: blur(15px);
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+            border: 1px solid $white;
+        }
+    }
 }
 
 .line {
@@ -99,6 +100,25 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px $black inset !important;
-  -webkit-text-fill-color: $white !important;
+    -webkit-box-shadow: 0 0 0 30px $black inset !important;
+    -webkit-text-fill-color: $white !important;
+}
+
+@media only screen and (max-width: 650px) {
+    .form__container {
+        form {
+            margin-left: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .form__title {
+        h2:first-child {
+            margin-left: 0;
+        }
+    }
+    .form__subtitle {
+        margin-left: 0;
+    }
 }

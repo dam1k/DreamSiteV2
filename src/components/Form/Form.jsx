@@ -27,22 +27,22 @@ const Form = () => {
         },
         scrollTrigger: {
           trigger: ".form__title",
-          // markers: true,
+        //   markers: true,
           start: "bottom 90%",
         },
       });
       gsap.from(".line--form", {
         width: "0%",
         ease: "power4.out",
-        // delay: -0.5,
+        delay: -0.5,
         duration: 3,
         stagger: {
           amount: 0.5,
         },
         scrollTrigger: {
-          trigger: ".line--form",
-          // markers: true,
-          start: "bottom 90%",
+          trigger: ".form__title",
+        //   markers: true,
+          start: "bottom 75%",
         },
       });
     }, comp);

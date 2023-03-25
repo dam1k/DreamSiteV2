@@ -12,7 +12,7 @@ const Header = ({ animation }) => {
     let ctx = gsap.context(() => {
       animation.from(".header__logo img, .nav__link div", {
         y: "110%",
-        delay: 0.2,
+        delay: 0.8,
         ease: "power4.out",
         duration: 1,
         stagger: {
@@ -42,6 +42,7 @@ const Header = ({ animation }) => {
 
   return (
     <>
+    <div className="overlay"></div>
       <header ref={comp} className="header">
         <div className="header__container">
           <a href="#" className="header__logo">

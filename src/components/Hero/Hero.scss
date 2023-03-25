@@ -1,35 +1,47 @@
 @import "../../variables";
 
 .hero {
-  // .hero__container
+    // .hero__container
 
-  &__container {
-  }
-
-  // .hero__text
-  &__text {
-    color: $white;
-    display: flex;
-    flex-wrap: wrap;
-    // row-gap: 35px;
-    column-gap: 15px;
-    font-weight: 500;
-    font-size: 50px;
-    line-height: 73px;
-    text-transform: uppercase;
-    h2:first-child {
-      margin-left: max(500px);
+    &__container {
     }
-  }
+
+    // .hero__text
+    &__text {
+        color: $white;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 15px;
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 73px;
+        text-transform: uppercase;
+        h2:first-child {
+            margin-left: max(500px);
+        }
+    }
 }
 
 @media only screen and (max-width: 1100px) {
-  .hero__text {
-    font-size: 20px;
-    line-height: 26px;
-    gap: 4px;
-    h2:first-child {
-      margin-left: 0;
+    .hero__text {
+        h2:first-child {
+            margin-left: 0;
+        }
     }
-  }
+}
+
+@media only screen and (max-width: 700px) {
+    .hero__text {
+        column-gap: 10px;
+        font-size: 40px;
+        line-height: 53px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .hero__text {
+        font-size: 30px;
+        line-height: 34px;
+        column-gap: 9px;
+    }
 }

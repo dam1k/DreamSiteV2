@@ -65,6 +65,21 @@ const Projects = () => {
           start: "bottom 90%",
         },
       });
+
+      gsap.from(".line--first", {
+        width: "0%",
+        ease: "power4.out",
+        // delay: -0.5,
+        duration: 3,
+        stagger: {
+          amount: 0.5,
+        },
+        scrollTrigger: {
+          trigger: ".line--first",
+          // markers: true,
+          start: "bottom 90%",
+        },
+      });
     });
     return () => ctx.revert();
   }, []);
@@ -97,11 +112,13 @@ const Projects = () => {
           <span className="projects__title--span">Projects</span>
           <span className="projects__title--span">02</span>
         </h2>
+        </div>
+        <div className="projects__container">
         <div className="projects__list">
           {projects.map((project) => {
             return (
               <div key={project.id} id={`project-${project.id}`}>
-                <hr className="line line--projects" />
+                <hr className="line line--first" />
                 <motion.div initial={false} 
                 layout
                 className="projects__dropdown">
@@ -127,7 +144,7 @@ const Projects = () => {
                       exit="collapsed"
                       variants={divVariants}
                       transition={{
-                        duration: 0.8,
+                        duration: 0.7,
                         ease: [0.04, 0.62, 0.23, 0.98],
                       }}
                       layout
@@ -151,13 +168,13 @@ const Projects = () => {
                               })}
                             </p>
                           </div>
-                          <div className="projects__info-images">
+                          {/* <div className="projects__info-images">
                             <img
                               src={project.img}
                               alt="Project Image"
                               className="projects__info-img"
                             />{" "}
-                          </div>
+                          </div> */}
                           <div></div>
                         </div>
                       </div>

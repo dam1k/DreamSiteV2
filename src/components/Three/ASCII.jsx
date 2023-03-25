@@ -4,13 +4,26 @@ import { OrbitControls, useCursor } from "@react-three/drei";
 import { AsciiEffect } from "three-stdlib";
 
 export default function ASCII() {
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    function setDimension() {
+      setWidth(window.innerWidth);
+    }
+
+    setDimension();
+
+    window.addEventListener('resize', setDimension);
+
+    return () => window.removeEventListener('resize', setDimension);
+  }, [width]);
+
   return (
     <Canvas>
       <color attach="background" args={["black"]} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
       <pointLight position={[-10, -10, -10]} />
       <Torusknot />
-      {/*<OrbitControls enableZoom={false} />*/}
+    <OrbitControls enableZoom={false} enabled={width > 600 ? true : false}/>
       <AsciiRenderer fgColor="white" bgColor="black" />
     </Canvas>
   );

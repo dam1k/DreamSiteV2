@@ -1,0 +1,38 @@
+.footer {
+     padding-top: 100px;
+     padding-bottom: 25px;
+     height: 500px;
+     background-color: #fff;
+
+     &__container {
+          display: grid;
+          grid-template-columns: minmax(auto, 1fr) minmax(auto, 1100px);
+     }
+     &__title {
+          display: flex;
+          column-gap: 13px;
+          flex-wrap: wrap;
+          font-family: "Red Hat Display";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 55px;
+          line-height: 73px;
+          text-transform: uppercase;
+          color:#000;
+          div:first-child {
+            margin-left: 200px;
+          }
+        }
+
+        &__left {
+          nav ul{
+               display: flex;
+               flex-direction: column;
+               justify-content: end;
+        }
+        }
+
+        &__link {
+          color: black;
+        }
+}

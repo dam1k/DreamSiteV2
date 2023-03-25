@@ -9,6 +9,8 @@
   left: 0;
   position: fixed;
   z-index: 20;
+  height:100vh;
+  overflow-y:hidden;
 }
 
 @keyframes animateLogo {

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import FooterMobile from "./components/Footer/FooterMobile";
 import React, { useState, useEffect } from "react";
 import Preloader from "./components/Preloader/Preloader";
 // import logo from "assets/logo.svg";
@@ -30,6 +31,20 @@ function App() {
     }
   }, []);
 
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    function setDimension() {
+      setWidth(window.innerWidth);
+    }
+
+    setDimension();
+
+    window.addEventListener('resize', setDimension);
+
+    return () => window.removeEventListener('resize', setDimension);
+  }, [width]);
+
+
 
   return (
     <BrowserRouter>
@@ -45,7 +60,7 @@ function App() {
                 <Route path="/" element={<Home animation={animation} />} />
                 {/* <Route path="/blog" element={<Blog />}/> */}
               </Routes>
-              <Footer/>
+              {width > 900 ? <Footer/> : <FooterMobile/>}
             </>
           )}
         </div>

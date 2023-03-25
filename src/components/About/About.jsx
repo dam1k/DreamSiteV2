@@ -80,7 +80,7 @@ const About = () => {
   }, []);
 
   return (
-    <div ref={comp} className="about">
+    <div ref={comp} className="about" id="about">
       <div className="about__container">
         <h2 className="about__title about__title--left overflow">
           <span className="about__title--span">About</span>{" "}

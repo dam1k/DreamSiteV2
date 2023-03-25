@@ -11,7 +11,6 @@ import Preloader from "./components/Preloader/Preloader";
 
 function App() {
   const [showPreloader, setShowPreloader] = useState(true);
-  // const [documentHasLoaded, setDocumentHasLoaded] = useState(document.readyState);
   let animation = gsap.timeline();
  
   useEffect(() => {
@@ -43,7 +42,6 @@ function App() {
 
     return () => window.removeEventListener('resize', setDimension);
   }, [width]);
-
 
 
   return (

@@ -11,6 +11,7 @@ const Home = ({ animation }) => {
     <>
       <Hero animation={animation} />
       <div className="canvas-wrapper">
+        <div className="block__mobile"/>
         <ASCII animation={animation} />
       </div>
       <About />

@@ -63,14 +63,14 @@ const Header = ({ animation }) => {
                   </a>
                 </li>
                 <li>
-                  <a href="#about" className="nav__link overflow">
+                  <a href="#" className="nav__link overflow">
                     <div>About</div>
                   </a>
                 </li>
               </ul>
               <ul className="nav__links">
                 <li>
-                  <a href="https://www.instagram.com/dreamsite.md/" className="nav__link overflow">
+                  <a href="#" className="nav__link overflow">
                     <div>Instagram</div>
                   </a>
                 </li>
@@ -86,9 +86,8 @@ const Header = ({ animation }) => {
                 </li>
               </ul>
             </nav>
-            
             <div className="header__links">
-              <div className="overflow">       
+              <div className="overflow">
                 <a href="#" className="header__link">
                   ↳ Telegram
                 </a>

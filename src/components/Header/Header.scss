@@ -13,6 +13,8 @@
         height: max-content;
         width: max-content;
         pointer-events: auto;
+        position: relative;
+        mix-blend-mode: difference;
     }
 
     // .header__container
@@ -169,7 +171,6 @@
     .projects__container {
         border-top: 1px solid $line;
     }
-
 }
 
 @media only screen and (max-width: 850px) {

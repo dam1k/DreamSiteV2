@@ -1,10 +1,9 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import "./Footer.scss";
 
 const Footer = () => {
      const footerTitleArr = "differentiate from others, don't be afraid.".split(" ");
      const footerCopyrightArr = "Copyright © 2021 - 2023 Dreamsite. All rights reserved.".split(" ");
-  
   return (
     <div className="footer">
      <div className="footer__container">

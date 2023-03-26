@@ -4,30 +4,32 @@ const projects = [
      {    id: 1,
           name: "Euromobila",
           type: "Live Site",
+          description: "From concept to fully working website",
+          status: "Finished",
           img: placeholder
      },
      {
           id: 2,
-          name: "Euromobila",
+          name: "KBK",
           type: "Live Site",
+          description: "Concept",
+          status: "Finished",
           img: placeholder
      },
      {
           id: 3,
-          name: "Euromobila",
-          type: "Live Site",
+          name: "InviaPacchi",
+          type: "Design",
+          description: "From concept to Frontend Implementation",
+          status: "Work in progress",
           img: placeholder
      },
      {
           id: 4,
-          name: "Euromobila",
-          type: "Live Site",
-          img: placeholder
-     },
-     {
-          id: 5,
-          name: "Euromobila",
-          type: "Live Site",
+          name: "Vag Service",
+          type: "Design",
+          description: "Concept",
+          status: "Finished",
           img: placeholder
      }
 ]

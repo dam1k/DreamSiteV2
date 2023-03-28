@@ -48,7 +48,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         {/*<div className="noise"></div>*/}
-        <div className="wrapper">
+        {/* <div className="wrapper"> */}
           {showPreloader ? (
             <Preloader animation={animation} />
           ) : (
@@ -62,7 +62,7 @@ function App() {
             </>
           )}
         </div>
-      </div>
+      {/* </div> */}
     </BrowserRouter>
   );
 }

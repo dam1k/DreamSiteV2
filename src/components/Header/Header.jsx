@@ -1,10 +1,12 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useState} from "react";
 import logo from "../../assets/logo.svg";
 import arrowupright from "../../assets/arrowupright.svg";
+import HeaderMobile from "./HeaderMobile";
 import "./Header.scss";
 import { gsap } from "gsap";
 
 const Header = ({ animation }) => {
+  const [openHeader, setOpenHeader] = useState(false);
   const comp = useRef();
   const buttonsRef = useRef();
 
@@ -92,14 +94,26 @@ const Header = ({ animation }) => {
                 </a>
               </div>
 
+              {/* {openHeader && <HeaderMobile/>} */}
+
               <div className="overflow">
                 <a href="#" className="header__link header__link--active">
                   +373(22)71-09-40
                 </a>
               </div>
             </div>
+
+            {/* <div className="header__nav-toggle">
+          <div className="header__nav-toggle-line" onClick={() => {
+              console.log('bjk');
+              setOpenHeader(prev => !prev)
+             }}></div>
+          <div className="header__nav-toggle-line"></div>
+     </div> */}
           </div>
         </div>
+      
+        {/* <HeaderMobile/> */}
       </header>
     </>
   );

@@ -1,4 +1,8 @@
-import placeholder from "../assets/placeholder.jpg";
+// import placeholder from "../assets/placeholder.jpg";
+import euromobila from "../assets/euromobila.png";
+import inviapacchi from "../assets/inviapacchi.png";
+import kbk from "../assets/kbk.png";
+import vag from "../assets/vag.png";
 
 const projects = [
      {    id: 1,
@@ -6,7 +10,7 @@ const projects = [
           type: "Live Site",
           description: "From concept to fully working website",
           status: "Finished",
-          img: placeholder
+          img: euromobila
      },
      {
           id: 2,
@@ -14,7 +18,7 @@ const projects = [
           type: "Live Site",
           description: "Concept",
           status: "Finished",
-          img: placeholder
+          img: kbk
      },
      {
           id: 3,
@@ -22,7 +26,7 @@ const projects = [
           type: "Design",
           description: "From concept to Frontend Implementation",
           status: "Work in progress",
-          img: placeholder
+          img: inviapacchi
      },
      {
           id: 4,
@@ -30,8 +34,8 @@ const projects = [
           type: "Design",
           description: "Concept",
           status: "Finished",
-          img: placeholder
+          img: vag
      }
-]
+];
 
 export default projects;

@@ -121,10 +121,12 @@ const Projects = () => {
                 <hr className="line line--first" />
                 <motion.div initial={false} 
                 layout
-                className="projects__dropdown">
+                className="projects__dropdown"
+                data-fx={project.id}>
                   <div
                     className="projects__text"
-                    onClick={() => handleClick(project.id)}>
+                    onClick={() => handleClick(project.id)}
+                    data-img="../assets/euromobila.png">
                     <h2 className="projects__name overflow">
                       <div>{project.name}</div>
                     </h2>
@@ -168,13 +170,13 @@ const Projects = () => {
                               })}
                             </p>
                           </div>
-                          {/* <div className="projects__info-images">
+                          <div className="projects__info-images">
                             <img
                               src={project.img}
                               alt="Project Image"
                               className="projects__info-img"
                             />{" "}
-                          </div> */}
+                          </div>
                           <div></div>
                         </div>
                       </div>

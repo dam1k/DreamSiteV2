@@ -6,7 +6,7 @@ const projects = [
           type: "Live Site",
           description: "From concept to fully working website",
           status: "Finished",
-          img: euromobila
+          img: placeholder
      },
      {
           id: 2,
@@ -14,7 +14,7 @@ const projects = [
           type: "Live Site",
           description: "Concept",
           status: "Finished",
-          img: kbk
+          img: placeholder
      },
      {
           id: 3,
@@ -22,7 +22,7 @@ const projects = [
           type: "Design",
           description: "From concept to Frontend Implementation",
           status: "Work in progress",
-          img: inviapacchi
+          img: placeholder
      },
      {
           id: 4,
@@ -30,7 +30,7 @@ const projects = [
           type: "Design",
           description: "Concept",
           status: "Finished",
-          img: vag
+          img: placeholder
      }
 ];
 

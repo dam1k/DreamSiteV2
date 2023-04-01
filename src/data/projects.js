@@ -1,8 +1,4 @@
-// import placeholder from "../assets/placeholder.jpg";
-import euromobila from "../assets/euromobila.png";
-import inviapacchi from "../assets/inviapacchi.png";
-import kbk from "../assets/kbk.png";
-import vag from "../assets/vag.png";
+import placeholder from "../assets/placeholder.jpg";
 
 const projects = [
      {    id: 1,

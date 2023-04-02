@@ -5,8 +5,9 @@ import ASCII from "../components/Three/ASCII";
 import About from "../components/About/About";
 import Projects from "../components/Projects/Projects.jsx";
 import Form from "../components/Form/Form";
+import ArticlesPreview from "../components/ArticlesPreview/ArticlesPreview";
 
-const Home = ({ animation }) => {
+const Home = ({ animation, posts }) => {
   return (
     <>
       <Hero animation={animation} />
@@ -17,6 +18,7 @@ const Home = ({ animation }) => {
       <About />
       <Projects />
       <Form />
+      <ArticlesPreview posts={posts}/>
     </>
   );
 };

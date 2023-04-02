@@ -5,16 +5,61 @@ import Home from "./pages/Home";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import FooterMobile from "./components/Footer/FooterMobile";
+import BlogPage from "./pages/BlogPage";
 import React, { useState, useEffect } from "react";
 import Preloader from "./components/Preloader/Preloader";
-// import logo from "assets/logo.svg";
+import {GraphQLClient, gql} from "graphql-request";
+
+const graphcms = new GraphQLClient('https://api-us-west-2.hygraph.com/v2/clfww67h35r0z01unamij79uk/master');
+
+const QUERY = gql`
+{
+  posts {
+    id, 
+    title, 
+    slug,
+    content {
+      html
+    }
+    author {
+      name, 
+    }
+    coverPhoto {
+      url
+    }
+  }
+}
+`;
+
+// export async function getStaticProps(context) {
+// const {posts} = await graphcms.request(QUERY);
+// return {
+//   props: {posts},
+// revalidate:10
+// },
+// }
 
 function App() {
-  const [showPreloader, setShowPreloader] = useState(true);
+  const [showPreloader, setShowPreloader] = useState(false);
+  const [width, setWidth] = useState(0);
+  const [posts, setPosts] = useState([]);
+
+  let firstLoad = sessionStorage.getItem('firstLoad') !== null ? false : true;
+
   let animation = gsap.timeline();
  
   useEffect(() => {
+    if(firstLoad) {
+      sessionStorage.setItem('firstLoad', false);
+      setShowPreloader(true);
+    }
+
+    const fetchPosts = async () => {
+      const {posts} = await graphcms.request(QUERY);
+      setPosts(posts);
+    }
     const onPageLoad = () => {
+      fetchPosts();
       setTimeout(() => {
         setShowPreloader(false);
       }, 1000);
@@ -30,7 +75,6 @@ function App() {
     }
   }, []);
 
-  const [width, setWidth] = useState(0);
   useEffect(() => {
     function setDimension() {
       setWidth(window.innerWidth);
@@ -43,26 +87,30 @@ function App() {
     return () => window.removeEventListener('resize', setDimension);
   }, [width]);
 
+  useEffect(() => {
+    console.log(posts);
+  }, [posts]);
+
 
   return (
     <BrowserRouter>
       <div className="App">
         {/*<div className="noise"></div>*/}
-        {/* <div className="wrapper"> */}
+        <div className="wrapper">
           {showPreloader ? (
             <Preloader animation={animation} />
           ) : (
             <>
               <Header animation={animation} />
               <Routes>
-                <Route path="/" element={<Home animation={animation} />} />
-                {/* <Route path="/blog" element={<Blog />}/> */}
+                <Route path="/" element={<Home animation={animation} posts={posts}/>} />
+                <Route path="/blog" element={<BlogPage />}/>
               </Routes>
               {width > 900 ? <Footer/> : <FooterMobile/>}
             </>
           )}
         </div>
-      {/* </div> */}
+      </div>
     </BrowserRouter>
   );
 }

@@ -8,8 +8,8 @@ const ArticlesPreview = ({posts}) => {
           <div className='articles__preview__container'>
                <BlogCard article={posts[0]}/>
                <div className="articles__preview__grid">
-               {posts.slice(1,3).map((post) => {
-                    return <BlogCard article={post}/>
+               {posts?.slice(1,3).map((post) => {
+                    return <BlogCard article={post} key={post.id}/>
                })}
                </div>
           </div>

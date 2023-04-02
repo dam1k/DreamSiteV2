@@ -47,7 +47,7 @@ const Header = ({ animation }) => {
     <div className="overlay"></div>
       <header ref={comp} className="header">
         <div className="header__container">
-          <a href="#" className="header__logo">
+          <a href="#" className="header__logo" >
             <div className="header__logo overflow">
               <img src={logo} alt="Logo" />
             </div>

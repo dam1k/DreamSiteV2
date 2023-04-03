@@ -87,10 +87,6 @@ function App() {
     return () => window.removeEventListener('resize', setDimension);
   }, [width]);
 
-  useEffect(() => {
-    console.log(posts);
-  }, [posts]);
-
 
   return (
     <BrowserRouter>

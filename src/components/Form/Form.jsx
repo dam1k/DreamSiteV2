@@ -61,7 +61,7 @@ const Form = () => {
             <div className="form__title">
               {formTitle.map((word, index) => {
                 return (
-                  <h2 className="overflow">
+                  <h2 className="overflow" key={index}>
                     <div key={index}>{word}</div>
                   </h2>
                 );

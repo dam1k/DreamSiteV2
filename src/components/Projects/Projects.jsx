@@ -1,7 +1,6 @@
 import React, { useState, useLayoutEffect, useEffect, useRef } from "react";
 import "./Projects.scss";
 import projects from "../../data/projects";
-import "../../components/Projects/base.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion, AnimatePresence } from "framer-motion";

@@ -5,7 +5,7 @@ const BlogCard = ({article}) => {
   return (
     <div className="blog-card">
        <div className="blog-card__cover">
-        <img src={article.coverPhoto.url}/>
+        <img src={article.coverPhoto.url} alt={article.title}/>
       </div>
       <div className="blog-card__text">
         <div className="blog-card__title">

@@ -93,7 +93,7 @@ const About = () => {
           <div className="about__flex">
             {titleArr.map((word, index) => {
               return (
-                <h2 className="about__title about__title--uppercase overflow">
+                <h2 className="about__title about__title--uppercase overflow" key={index}>
                   <div className="about__word" key={index}>
                     {word}
                   </div>
@@ -115,15 +115,10 @@ const About = () => {
               </h3>
             </div>
 
-            {/* <h3 className="about__subtitle">
-              {subTitleArr.map((word, index) => {
-                return <span className="overflow" key={index}>{word}</span>;
-              })}
-            </h3> */}
             <div className="about__subtitle">
               {subTitleArr.map((word, index) => {
                 return (
-                  <h3 className="overflow">
+                  <h3 className="overflow" key={index}>
                     <div key={index}>
                       {word}
                     </div>

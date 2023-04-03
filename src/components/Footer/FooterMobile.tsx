@@ -21,6 +21,7 @@ const FooterMobile = () => {
           })}
           </h2>
 
+          <div className='footer-mobile__bottom'>
           <div className="footer-mobile__left">
         <nav>
           <ul>
@@ -83,6 +84,7 @@ const FooterMobile = () => {
               );
           })}
           </h3>
+          </div>
       </div>
 
       

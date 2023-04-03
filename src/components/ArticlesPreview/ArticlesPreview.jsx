@@ -4,16 +4,18 @@ import "./ArticlesPreview.scss";
 
 const ArticlesPreview = ({posts}) => {
   return (
-    <div className='articles__preview' id="articles__preview">
-          <div className='articles__preview__container'>
-               <BlogCard article={posts[0]}/>
-               <div className="articles__preview__grid">
+    <>
+    <div className="articles-preview">
+        <div className="articles-preview__container">
+        <BlogCard article={posts[0]}/>
+               <div className="articles-preview__grid">
                {posts?.slice(1,3).map((post) => {
                     return <BlogCard article={post} key={post.id}/>
                })}
-               </div>
-          </div>
+        </div>
     </div>
+    </div>
+    </>
   )
 }
 

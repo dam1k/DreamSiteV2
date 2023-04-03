@@ -1,13 +1,16 @@
-.articles__preview {
-     position: relative;
-     z-index: 10;
-     &__container {
-               display: grid;
-               grid-template-columns: minmax(auto, 1fr) minmax(auto, 900px);
-     }
+.articles-preview {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 300px;
+    &__container {
+        display: grid;
+        grid-template-columns: minmax(auto, 1fr) minmax(auto, 900px);
+        column-gap: 15px;
+    }
 
-     &__grid {
-          display:grid;
-          grid-template-columns: 1fr 1fr;
-     }
+    &__grid {
+        display: grid;
+        column-gap: 15px;
+        grid-template-columns: 1fr 1fr;
+    }
 }

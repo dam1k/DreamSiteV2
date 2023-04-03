@@ -5,7 +5,8 @@ const Footer = () => {
      const footerTitleArr = "differentiate from others, don't be afraid.".split(" ");
      const footerCopyrightArr = "Copyright © 2021 - 2023 Dreamsite. All rights reserved.".split(" ");
   return (
-    <div className="footer">
+    <div className='overflow'>
+        <div className="footer">
      <div className="footer__container">
      <div className="footer__left">
         <nav>
@@ -84,6 +85,7 @@ const Footer = () => {
           
      </div>
      </div>
+    </div>
   )
 }
 

@@ -1,102 +1,102 @@
 @import "./variables.scss";
 
 body {
-  position: relative;
-  color: $white;
-  overflow-x: hidden;
-  background-color: $black;
+    position: relative;
+    color: $white;
+    overflow-x: hidden;
+    background-color: $black;
 }
 
 [class*="__container"] {
-  margin: 0 auto;
-  max-width: calc($container + 30px);
-  padding: 0 15px;
+    margin: 0 auto;
+    max-width: calc($container + 30px);
+    padding: 0 15px;
 }
 
 button {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 6.5px;
-  padding-bottom: 7px;
-  font-family: "IBMPlexMono-Regular";
-  border-radius: 7px;
-  cursor: pointer;
-  font-size: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6.5px;
+    padding-bottom: 7px;
+    font-family: "IBMPlexMono-Regular";
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 12px;
 }
 
 a {
-  text-decoration: none;
-  color: $white;
+    text-decoration: none;
+    color: $white;
 }
 
 .dark_btn {
-  background-color: rgba(255, 255, 255, 0.25);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .light_btn {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #fff;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
 }
 
 .flex {
-  display: flex;
+    display: flex;
 }
 
 .items {
-  align-items: flex-start;
+    align-items: flex-start;
 }
 
 .wrapper {
-  min-height: 150vh;
+    min-height: 150vh;
 }
 
 .overflow {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 // Scrollbar ====================================================================================================
 
 /* Firefox */
 * {
-  scrollbar-width: auto;
-  scrollbar-color: #0f0f0f #000000;
+    scrollbar-width: auto;
+    scrollbar-color: #0f0f0f #000000;
 }
 
 /* Smooth Scrolling*/
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Width */
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #000;
+    background: #000;
 }
 
 /* Handle/Thunmb */
 ::-webkit-scrollbar-thumb {
-  background: #0f0f0f;
-  border: 1px solid #1b1b1b;
-  border-radius: 5px;
+    background: #0f0f0f;
+    border: 1px solid #1b1b1b;
+    border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #202122;
+    background: #202122;
 }
 
 // Mobile style ====================================================================================================
 
 /* Remove Highlight on Mobile */
 * {
-  -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 
 input,
@@ -104,71 +104,43 @@ textarea,
 button,
 select,
 a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* Custom Text Selection */
 ::selection {
-  color: $black;
-  background: #655dbb;
+    color: $black;
+    background: #655dbb;
 }
 
 /* Code for Firefox */
 ::-moz-selection {
-  color: white;
-  background: black;
+    color: white;
+    background: black;
 }
 
 .canvas-wrapper {
-  height: 1000px;
-  width: 100%;
-}
-
-.skeleton-line {
-  position: absolute;
-  border-color: transparent;
-  background-color: $line;
-  &--1 {
-    top: 113px;
+    height: 1000px;
     width: 100%;
-    right: 0;
-  }
-  &--2 {
-    top: 35px;
-    width: 100%;
-    right: 0;
-  }
-
-  &--3 {
-    top: 0;
-    width: 1px;
-    min-height: 100%;
-  }
-
-  &--4 {
-    top: 35px;
-    width: 100%;
-    right: 0;
-  }
 }
 
 @media only screen and (max-width: 1100px) {
-  .canvas-wrapper {
-    height: 450px;
-    // pointer-events: none;
-  }
+    .canvas-wrapper {
+        height: 450px;
+        // pointer-events: none;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-  .canvas-wrapper {
-    position:relative;
-  }
-  .block__mobile {
-  position:absolute;
-  z-index:20;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  }
+    .canvas-wrapper {
+        position: relative;
+    }
+    .block__mobile {
+        position: absolute;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }

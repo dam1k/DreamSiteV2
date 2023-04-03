@@ -68,7 +68,9 @@
 }
 
 .line {
-    border-color: $greySecond;
+    border: 0px solid transparent;
+    height: 1px;
+    background-color: $greySecond;
 }
 
 .projects {

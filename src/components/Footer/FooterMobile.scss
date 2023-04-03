@@ -9,7 +9,6 @@
     background-color: #fff;
     backface-visibility: hidden;
     user-select: none;
-    overflow: hidden !important;
     z-index: 1;
     //     display:none !important;
 
@@ -17,9 +16,9 @@
         position: fixed;
         display: grid;
         grid-template-columns: 1fr;
-        height: 375px;
-        max-height: 375px;
+        height: 650px;
         bottom: 25px;
+        padding-top: 180px;
         right: 0;
         left: 0;
     }
@@ -37,6 +36,12 @@
         //    div:first-child {
         //        margin-left: 200px;
         //    }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
     }
 
     &__top {

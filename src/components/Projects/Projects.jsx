@@ -22,37 +22,6 @@ const Projects = () => {
   const [projectToShow, setProjectToShow] = useState(1);
   const comp = useRef();
 
-  // useEffect(() => {
-  //   const script1 = document.createElement('script');
-  //   const script2 = document.createElement('script');
-  //   const script3 = document.createElement('script');
-  //   const script4 = document.createElement('script');
-  
-  //   script1.src = "https://cdn.jsdelivr.net/gh/codrops/ImageRevealHover/js/charming.min.js?_v=20230203000109";
-  //   script1.async = true;
-
-  //   script2.src = "https://cdn.jsdelivr.net/gh/codrops/ImageRevealHover/js/imagesloaded.pkgd.min.js?_v=20230203000109";
-  //   script2.async = true;
-
-  //   script3.src = "https://cdn.jsdelivr.net/gh/codrops/ImageRevealHover/js/TweenMax.min.js?_v=20230203000109";
-  //   script3.async = true;
-
-  //   script4.src = "https://cdn.jsdelivr.net/gh/codrops/ImageRevealHover/js/demo.js?_v=20230203000109";
-  //   script4.async = true;
-  
-  //   document.body.appendChild(script1);
-  //   document.body.appendChild(script2);
-  //   document.body.appendChild(script3);
-  //   document.body.appendChild(script4);
-  
-  //   return () => {
-  //     document.body.removeChild(script1);
-  //     document.body.removeChild(script2);
-  //     document.body.removeChild(script3);
-  //     document.body.removeChild(script4);
-  //   }
-  // }, []);
-
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.from(".projects__title--span", {

@@ -18,8 +18,13 @@ const projectsSubitleOne =
 
 const Projects = () => {
   gsap.registerPlugin(ScrollTrigger);
-  const [projectToShow, setProjectToShow] = useState(1);
+  const [projectToShow, setProjectToShow] = useState(0);
+  const [imageToShow, setImageToShow] = useState(0);
+  const [styles, setStyles] = useState(null);
   const comp = useRef();
+  const projectsRef = useRef([]);
+
+  const imageRef = useRef(null);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -121,19 +126,42 @@ const Projects = () => {
                 <hr className="line line--first" />
                 <motion.div initial={false} 
                 layout
-                className="projects__dropdown"
-                data-fx={project.id}>
+                className="projects__dropdown">
                   <div
                     className="projects__text"
+                    ref={(el) => (projectsRef.current[project.id] = el)}
                     onClick={() => handleClick(project.id)}
-                    data-img='../../assets/euromobila.png'
-                    data-fx="2">
+                    onMouseMove={(e) => {
+                      setImageToShow(project.id);
+                      const cursorX = e.pageX;
+                      const cursorY = e.pageY;
+
+                      const itemLeft = projectsRef.current[project.id].getBoundingClientRect().left;
+                      const itemTop = projectsRef.current[project.id].getBoundingClientRect().top;
+
+                      const imagePositionX = cursorX - itemLeft;
+                      const imagePositionY = cursorY - itemTop - window.scrollY;
+
+                      setStyles({top: `${imagePositionY + 20}px`, left: `${imagePositionX + 20}px`});
+                    }
+                    }
+                    onMouseLeave={() =>  setImageToShow(0)}>
                     <h2 className="projects__name overflow">
                       <div>{project.name}</div>
                     </h2>
                     <h2 className="projects__desc overflow">
                       <div>{project.type}</div>
                     </h2>
+                    <div className={`projects-image ${imageToShow === project.id  ? "active" : ""}`}
+                    ref={imageToShow === project.id ? imageRef : null}
+                    style={project.id === imageToShow ? styles : {}}
+                    >
+                      <img
+                          src={project.img}
+                          alt="Project Image"
+                          className={`projects__info-img`}
+                      />{" "}
+                    </div>
                   </div>
                 </motion.div>
                 <AnimatePresence 
@@ -170,13 +198,6 @@ const Projects = () => {
                                 return <span key={index}>{word}</span>;
                               })}
                             </p>
-                          </div>
-                          <div className="projects__info-images">
-                            <img
-                              src={project.img}
-                              alt="Project Image"
-                              className="projects__info-img"
-                            />{" "}
                           </div>
                           <div></div>
                         </div>

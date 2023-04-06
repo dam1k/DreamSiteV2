@@ -6,6 +6,13 @@ const ArticlesPreview = ({posts}) => {
   return (
     <>
     <div className="articles-preview">
+        <div className="articles-preview__container articles-preview__container--first">
+            <h2 className="article-preview__text overflow">
+                <span>Blog</span>
+                <span>03</span>
+            </h2>
+            <div className="line line--blog"></div>
+        </div>
         <div className="articles-preview__container">
         <BlogCard className="blog-card-center-top" article={posts[0]}/>
                <div className="articles-preview__grid">

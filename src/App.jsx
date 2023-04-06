@@ -31,14 +31,6 @@ const QUERY = gql`
 }
 `;
 
-// export async function getStaticProps(context) {
-// const {posts} = await graphcms.request(QUERY);
-// return {
-//   props: {posts},
-// revalidate:10
-// },
-// }
-
 function App() {
   const [showPreloader, setShowPreloader] = useState(false);
   const [width, setWidth] = useState(0);

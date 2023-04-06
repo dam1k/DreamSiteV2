@@ -14,3 +14,30 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
+@media only screen and (max-width: 1400px) {
+    .articles-preview__container {
+        grid-template-columns: 1fr;
+        .blog-card-center-top {
+            width:50%;
+            justify-self: center;
+            margin-bottom: 30px;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    .articles-preview__grid {
+        display: grid;
+        column-gap: 15px;
+        grid-template-columns: 1fr !important;
+    }
+    .blog-card-center-top {
+        width:100% !important;
+        justify-self: center;
+        margin-bottom: 15px;
+    }
+
+}

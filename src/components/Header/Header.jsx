@@ -4,6 +4,7 @@ import arrowupright from "../../assets/arrowupright.svg";
 import HeaderMobile from "./HeaderMobile";
 import "./Header.scss";
 import { gsap } from "gsap";
+import {NavLink} from "react-router-dom";
 
 const Header = ({ animation }) => {
   const [openHeader, setOpenHeader] = useState(false);
@@ -65,6 +66,13 @@ const Header = ({ animation }) => {
                 <li>
                   <a href="#" className="nav__link overflow">
                     <div>About</div>
+                  </a>
+                </li>
+                <li>
+                  <a className="nav__link overflow">
+                    <div>
+                     <NavLink to="/blog">Blog</NavLink>
+                    </div>
                   </a>
                 </li>
               </ul>

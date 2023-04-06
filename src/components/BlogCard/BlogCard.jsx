@@ -1,9 +1,9 @@
 import React from 'react'
 import "./BlogCard.scss";
 
-const BlogCard = ({article}) => {
+const BlogCard = ({article,  className}) => {
   return (
-    <div className="blog-card">
+    <div className={`blog-card ${className ? className : ""}`}>
        <div className="blog-card__cover">
         <img src={article.coverPhoto.url} alt={article.title}/>
       </div>

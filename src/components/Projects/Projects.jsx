@@ -187,6 +187,9 @@ const Projects = () => {
                         initial="false">
                         </motion.div>
                         <div className="projects__info-inner">
+                          <div className="projects__image__mobile">
+                            <img src={project.img}/>
+                          </div>
                           <div className="projects__info-text">
                             <h2 className="projects__info-title overflow">
                               {projectsTitleOne.map((word, index) => {

@@ -136,12 +136,6 @@
         display: flex;
         flex-direction: column;
         gap: 25px;
-
-        &:hover img {
-            //visibility: visible;
-            //opacity:1;
-            //transform:scale(1);
-        }
     }
 
     // .projects__info-title
@@ -182,6 +176,16 @@
 .projects__empty-div {
     height: 100%;
 }
+.projects__image__mobile {
+    display:none;
+    width:100%;
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius:8px;
+    }
+}
+
 
 @media only screen and (max-width: 540px) {
     .projects {
@@ -199,5 +203,15 @@
     }
     .projects__text {
         justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .projects-image {
+        display:none !important;
+    }
+
+    .projects__image__mobile {
+        display:block;
     }
 }

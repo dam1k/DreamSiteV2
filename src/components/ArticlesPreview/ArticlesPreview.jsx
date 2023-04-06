@@ -7,7 +7,7 @@ const ArticlesPreview = ({posts}) => {
     <>
     <div className="articles-preview">
         <div className="articles-preview__container">
-        <BlogCard article={posts[0]}/>
+        <BlogCard className="blog-card-center-top" article={posts[0]}/>
                <div className="articles-preview__grid">
                {posts?.slice(1,3).map((post) => {
                     return <BlogCard article={post} key={post.id}/>

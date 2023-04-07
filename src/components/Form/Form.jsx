@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { useNavigate } from "react-router-dom";
 
 const formTitle =
-  "With a focus on results-driven design and cutting-edge technology, we'll help you take your online presence to the next lev".split(
+  "Your website should work for you, not against you. Request a web development quote and see the difference.".split(
     " "
   );
 

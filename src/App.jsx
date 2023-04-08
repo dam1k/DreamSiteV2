@@ -35,6 +35,8 @@ function App() {
   const [showPreloader, setShowPreloader] = useState(false);
   const [width, setWidth] = useState(0);
   const [posts, setPosts] = useState([]);
+  const [projectsClicked, setProjectsClicked] = useState(false);
+  const [aboutClicked, setAboutClicked] = useState(false);
 
   let firstLoad = sessionStorage.getItem('firstLoad') !== null ? false : true;
 

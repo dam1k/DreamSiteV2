@@ -43,3 +43,19 @@
         text-transform: uppercase;
     }
 }
+
+
+@media only screen and (max-width: 1388px) {
+    .articles-preview__container--second {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .articles-preview__grid {
+        grid-template-columns: 1fr;
+         & > div {
+             margin-bottom:15px;
+         }
+    }
+}

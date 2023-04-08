@@ -43,8 +43,13 @@ const Header = ({ animation }) => {
     return () => ctx.revert();
   }, []);
 
+  function closeHeader() {
+    setOpenHeader(false);
+  }
+
   return (
     <>
+       <HeaderMobile openHeader={openHeader} closeHeader={closeHeader}/>
     <div className="overlay"></div>
       <header ref={comp} className="header">
         <div className="header__container">
@@ -64,16 +69,16 @@ const Header = ({ animation }) => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="nav__link overflow">
+                  <NavLink to="/#about" className="nav__link overflow">
                     <div>About</div>
-                  </a>
+                  </NavLink>
                 </li>
                 <li>
-                  <a className="nav__link overflow">
+                  <NavLink className="nav__link overflow" to="/blog">
                     <div>
-                     <NavLink to="/blog">Blog</NavLink>
+                      Blog
                     </div>
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
               <ul className="nav__links">
@@ -101,26 +106,32 @@ const Header = ({ animation }) => {
                 </a>
               </div>
 
-              {/* {openHeader && <HeaderMobile/>} */}
+               {/*{openHeader && <HeaderMobile/>}*/}
 
               <div className="overflow">
                 <a href="#" className="header__link header__link--active">
                   +373(22)71-09-40
                 </a>
               </div>
+
             </div>
 
-            {/* <div className="header__nav-toggle">
-          <div className="header__nav-toggle-line" onClick={() => {
-              console.log('bjk');
+            <div className={`header__nav-toggle ${openHeader ? "active" : ""}`} onClick={() => {
+              // if(!openHeader) {
+              //   document.body.style.height = "100vh";
+              //   document.body.style.overflow = "hidden";
+              // } else {
+              //   document.body.style.height = "100%";
+              //   document.body.style.overflow = "visible";
+              // }
               setOpenHeader(prev => !prev)
-             }}></div>
-          <div className="header__nav-toggle-line"></div>
-     </div> */}
+            }
+            }>
+          <div className={`header__nav-toggle-line`}/>
+          <div className="header__nav-toggle-line"/>
+     </div>
           </div>
         </div>
-      
-        {/* <HeaderMobile/> */}
       </header>
     </>
   );

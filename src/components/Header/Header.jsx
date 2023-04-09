@@ -69,21 +69,21 @@ const Header = ({ animation }) => {
                   </a>
                 </li>
                 <li>
-                  <NavLink to="/#about" className="nav__link overflow">
+                  <a href="/#about" className="nav__link overflow">
                     <div>About</div>
-                  </NavLink>
+                  </a>
                 </li>
-                <li>
-                  <NavLink className="nav__link overflow" to="/blog">
-                    <div>
-                      Blog
-                    </div>
-                  </NavLink>
-                </li>
+                {/*<li>*/}
+                {/*  <NavLink className="nav__link overflow" to="/blog">*/}
+                {/*    <div>*/}
+                {/*      Blog*/}
+                {/*    </div>*/}
+                {/*  </NavLink>*/}
+                {/*</li>*/}
               </ul>
               <ul className="nav__links">
                 <li>
-                  <a href="#" className="nav__link overflow">
+                  <a href="https://instagram.com/dreamsite.md" className="nav__link overflow">
                     <div>Instagram</div>
                   </a>
                 </li>
@@ -110,7 +110,7 @@ const Header = ({ animation }) => {
 
               <div className="overflow">
                 <a href="#" className="header__link header__link--active">
-                  +373(22)71-09-40
+                  +373 799 19 163
                 </a>
               </div>
 

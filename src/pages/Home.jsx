@@ -18,7 +18,7 @@ const Home = ({ animation, posts }) => {
       <About />
       <Projects />
       <Form />
-      {posts.length !== 0 && <ArticlesPreview posts={posts}/>}
+      {/*{posts.length !== 0 && <ArticlesPreview posts={posts}/>}*/}
     </>
   );
 };

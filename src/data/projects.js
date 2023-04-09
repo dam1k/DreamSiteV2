@@ -1,7 +1,7 @@
-import euromobila from "../assets/euromobila.png";
-import vag from "../assets/vag.png";
-import kbk from "../assets/kbk.png";
-import inviapacchi from "../assets/inviapacchi.png";
+import euromobila from "../assets/euromobila.webp";
+import vag from "../assets/vag.webp";
+import kbk from "../assets/kbk.webp";
+import inviapacchi from "../assets/inviapacchi.webp";
 
 const projects = [
     {

@@ -116,17 +116,7 @@ const Header = ({ animation }) => {
 
             </div>
 
-            <div className={`header__nav-toggle ${openHeader ? "active" : ""}`} onClick={() => {
-              // if(!openHeader) {
-              //   document.body.style.height = "100vh";
-              //   document.body.style.overflow = "hidden";
-              // } else {
-              //   document.body.style.height = "100%";
-              //   document.body.style.overflow = "visible";
-              // }
-              setOpenHeader(prev => !prev)
-            }
-            }>
+            <div className={`header__nav-toggle ${openHeader ? "active" : ""}`} onClick={() => setOpenHeader(prev => !prev)}>
           <div className={`header__nav-toggle-line`}/>
           <div className="header__nav-toggle-line"/>
      </div>

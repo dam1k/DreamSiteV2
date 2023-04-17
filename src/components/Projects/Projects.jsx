@@ -192,13 +192,13 @@ const Projects = () => {
                           </div>
                           <div className="projects__info-text">
                             <h2 className="projects__info-title overflow">
-                              {projectsTitleOne.map((word, index) => {
-                                return <span key={index}>{word}</span>;
+                              {project.title.split(" ").map((word, index) => {
+                                return <span key={index}>{word}</span>
                               })}
                             </h2>
                             <p className="projects__info-subtitle overflow">
-                              {projectsSubitleOne.map((word, index) => {
-                                return <span key={index}>{word}</span>;
+                              {project.subtitle.split(" ").map((word, index) => {
+                                return <span key={index}>{word}</span>
                               })}
                             </p>
                           </div>
